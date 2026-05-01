@@ -23,6 +23,5 @@ dist-ssr
 *.sln
 *.sw?
 
-# TanStack Router generated
-src/routeTree.gen.ts
-routeTree.gen.ts
+# TanStack Router generated file is intentionally committed
+# so CI/Vercel builds can type-check without running the dev server first.
