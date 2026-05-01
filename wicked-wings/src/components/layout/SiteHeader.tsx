@@ -29,7 +29,7 @@ export function SiteHeader() {
           <img src={logo} alt="" className="size-8" aria-hidden="true" />
           <span
             className="brand-logo leading-none select-none"
-            style={{ fontSize: "1.6rem" }}
+            style={{ fontSize: "2rem" }}
           >
             Wicked Wings
           </span>
