@@ -5,7 +5,7 @@
 
 @font-face {
   font-family: 'Dark Crystal';
-  src: url('./assets/fonts/dark-crystal-solid.ttf') format('truetype');
+  src: url('/fonts/dark-crystal-solid.ttf') format('truetype');
   font-weight: normal;
   font-style: normal;
   font-display: swap;
@@ -13,7 +13,7 @@
 
 @font-face {
   font-family: 'Dark Crystal Outline';
-  src: url('./assets/fonts/dark-crystal-outline.ttf') format('truetype');
+  src: url('/fonts/dark-crystal-outline.ttf') format('truetype');
   font-weight: normal;
   font-style: normal;
   font-display: swap;
@@ -164,7 +164,7 @@
 @layer utilities {
   .brand-logo {
     font-family: 'Dark Crystal', var(--font-display);
-    color: #8b1a00;
+    color: #cc2200;
     -webkit-text-stroke: 1px white;
     text-shadow: 2px 3px 6px #000, 1px 1px 0 #000, -1px -1px 0 #000;
     letter-spacing: 0.04em;
