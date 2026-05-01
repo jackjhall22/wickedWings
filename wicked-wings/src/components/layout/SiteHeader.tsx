@@ -65,13 +65,13 @@ export function SiteHeader() {
           </SheetTrigger>
           <SheetContent side="right" className="w-72">
             <SheetTitle className="sr-only">Navigation</SheetTitle>
-            <nav className="flex flex-col gap-4 pt-8" aria-label="Mobile navigation">
+            <nav className="flex flex-col items-center gap-4 pt-8" aria-label="Mobile navigation">
               {navLinks.map((link) => (
                 <Link
                   key={link.to}
                   to={link.to}
-                  className="text-base font-medium text-muted-foreground hover:text-foreground transition-colors py-1"
-                  activeProps={{ className: "text-base font-medium text-foreground py-1" }}
+                  className="text-base font-medium text-muted-foreground hover:text-foreground transition-colors py-1 text-center w-full"
+                  activeProps={{ className: "text-base font-medium text-foreground py-1 text-center w-full" }}
                 >
                   {link.label}
                 </Link>
