@@ -1,6 +1,7 @@
 import { Link } from "@tanstack/react-router"
-import { Menu, UtensilsCrossed } from "lucide-react"
+import { Menu } from "lucide-react"
 import { Button } from "@/components/ui/button"
+import logo from "@/assets/logo.png"
 import {
   Sheet,
   SheetContent,
@@ -22,7 +23,7 @@ export function SiteHeader() {
       <div className="container mx-auto flex h-16 items-center justify-between gap-4 px-4">
         {/* Brand */}
         <Link to="/" className="flex items-center gap-2 shrink-0">
-          <UtensilsCrossed className="size-6 text-primary" />
+          <img src={logo} alt="" className="size-8" aria-hidden="true" />
           <span
             className="text-lg font-bold text-foreground leading-none"
             style={{ fontFamily: "var(--font-display)" }}

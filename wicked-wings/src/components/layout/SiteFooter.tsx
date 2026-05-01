@@ -1,6 +1,6 @@
 import { Link } from "@tanstack/react-router"
-import { UtensilsCrossed } from "lucide-react"
 import { Separator } from "@/components/ui/separator"
+import logo from "@/assets/logo.png"
 
 const navLinks = [
   { to: "/", label: "Home" },
@@ -17,7 +17,7 @@ export function SiteFooter() {
           {/* Brand */}
           <div className="flex flex-col gap-4">
             <div className="flex items-center gap-2">
-              <UtensilsCrossed className="size-6 text-primary" />
+              <img src={logo} alt="" className="size-8" aria-hidden="true" />
               <span
                 className="text-lg font-bold text-foreground"
                 style={{ fontFamily: "var(--font-display)" }}
