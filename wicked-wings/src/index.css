@@ -1,5 +1,21 @@
 @import url('https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;600;700;900&family=Be+Vietnam+Pro:wght@400;500;600&display=swap');
 
+@font-face {
+  font-family: 'Dark Crystal';
+  src: url('./assets/fonts/dark-crystal-solid.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Dark Crystal Outline';
+  src: url('./assets/fonts/dark-crystal-outline.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+
 @import "tailwindcss";
 @import "tw-animate-css";
 @import "shadcn/tailwind.css";
@@ -52,45 +68,45 @@
 }
 
 :root {
-    --background: #111316;
-    --foreground: #e2e2e6;
-    --card: #1e2023;
-    --card-foreground: #e2e2e6;
-    --popover: #1e2023;
-    --popover-foreground: #e2e2e6;
-    --primary: #ff571a;
-    --primary-foreground: #000000;
-    --secondary: #282a2d;
-    --secondary-foreground: #e2e2e6;
-    --muted: #282a2d;
-    --muted-foreground: #e6beb2;
-    --accent: #2ae500;
+    --background: #f8f7f5;
+    --foreground: #111316;
+    --card: #ffffff;
+    --card-foreground: #111316;
+    --popover: #ffffff;
+    --popover-foreground: #111316;
+    --primary: #e84b12;
+    --primary-foreground: #ffffff;
+    --secondary: #f0efed;
+    --secondary-foreground: #111316;
+    --muted: #f0efed;
+    --muted-foreground: #6b6460;
+    --accent: #1db800;
     --accent-foreground: #022100;
-    --destructive: #ff525c;
-    --destructive-foreground: #000000;
-    --border: rgba(255, 255, 255, 0.1);
-    --input: #1a1c1f;
-    --ring: #ff571a;
-    --chart-1: #ff571a;
-    --chart-2: #2ae500;
-    --chart-3: #ff525c;
-    --chart-4: #eab308;
-    --chart-5: #f97316;
+    --destructive: #dc2626;
+    --destructive-foreground: #ffffff;
+    --border: rgba(0, 0, 0, 0.1);
+    --input: #ebebeb;
+    --ring: #e84b12;
+    --chart-1: #e84b12;
+    --chart-2: #1db800;
+    --chart-3: #dc2626;
+    --chart-4: #ca8a04;
+    --chart-5: #ea6c00;
     --radius: 0.625rem;
-    --sidebar: #1e2023;
-    --sidebar-foreground: #e2e2e6;
-    --sidebar-primary: #ff571a;
-    --sidebar-primary-foreground: #000000;
-    --sidebar-accent: #282a2d;
-    --sidebar-accent-foreground: #e2e2e6;
-    --sidebar-border: rgba(255, 255, 255, 0.1);
-    --sidebar-ring: #ff571a;
+    --sidebar: #ffffff;
+    --sidebar-foreground: #111316;
+    --sidebar-primary: #e84b12;
+    --sidebar-primary-foreground: #ffffff;
+    --sidebar-accent: #f0efed;
+    --sidebar-accent-foreground: #111316;
+    --sidebar-border: rgba(0, 0, 0, 0.1);
+    --sidebar-ring: #e84b12;
     /* Heat scale */
     --heat-1: #71717a;
-    --heat-2: #eab308;
-    --heat-3: #f97316;
-    --heat-4: #ff525c;
-    --heat-5: #ff0000;
+    --heat-2: #ca8a04;
+    --heat-3: #ea6c00;
+    --heat-4: #dc2626;
+    --heat-5: #cc0000;
 }
 
 .dark {
@@ -144,4 +160,14 @@
   html {
     @apply font-sans;
     }
+}
+
+@layer utilities {
+  .brand-logo {
+    font-family: 'Dark Crystal', var(--font-display);
+    color: #8b1a00;
+    -webkit-text-stroke: 1px white;
+    text-shadow: 2px 3px 6px #000, 1px 1px 0 #000, -1px -1px 0 #000;
+    letter-spacing: 0.04em;
+  }
 }

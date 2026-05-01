@@ -19,10 +19,10 @@ export function SiteFooter() {
             <div className="flex items-center gap-2">
               <img src={logo} alt="" className="size-8" aria-hidden="true" />
               <span
-                className="text-lg font-bold text-foreground"
-                style={{ fontFamily: "var(--font-display)" }}
+                className="brand-logo leading-none select-none"
+                style={{ fontSize: "1.4rem" }}
               >
-                WICKED WINGS
+                Wicked Wings
               </span>
             </div>
             <p className="text-sm text-muted-foreground max-w-xs">

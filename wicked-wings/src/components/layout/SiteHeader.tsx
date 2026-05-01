@@ -1,5 +1,5 @@
 import { Link } from "@tanstack/react-router"
-import { Menu } from "lucide-react"
+import { Menu, Moon, Sun } from "lucide-react"
 import { Button } from "@/components/ui/button"
 import logo from "@/assets/logo.png"
 import {
@@ -9,6 +9,7 @@ import {
   SheetTrigger,
 } from "@/components/ui/sheet"
 import { BookATableDialog } from "@/components/booking/BookATableDialog"
+import { useTheme } from "@/lib/theme"
 
 const navLinks = [
   { to: "/", label: "Home" },
@@ -18,6 +19,8 @@ const navLinks = [
 ]
 
 export function SiteHeader() {
+  const { theme, toggleTheme } = useTheme()
+
   return (
     <header className="sticky top-0 z-40 border-b border-border bg-background/95 backdrop-blur">
       <div className="container mx-auto flex h-16 items-center justify-between gap-4 px-4">
@@ -25,10 +28,10 @@ export function SiteHeader() {
         <Link to="/" className="flex items-center gap-2 shrink-0">
           <img src={logo} alt="" className="size-8" aria-hidden="true" />
           <span
-            className="text-lg font-bold text-foreground leading-none"
-            style={{ fontFamily: "var(--font-display)" }}
+            className="brand-logo leading-none select-none"
+            style={{ fontSize: "1.6rem" }}
           >
-            WICKED WINGS
+            Wicked Wings
           </span>
         </Link>
 
@@ -48,6 +51,14 @@ export function SiteHeader() {
 
         {/* Desktop CTA */}
         <div className="hidden md:flex items-center gap-3">
+          <Button
+            variant="ghost"
+            size="icon"
+            onClick={toggleTheme}
+            aria-label={theme === "dark" ? "Switch to light mode" : "Switch to dark mode"}
+          >
+            {theme === "dark" ? <Sun className="size-5" /> : <Moon className="size-5" />}
+          </Button>
           <BookATableDialog>
             <Button variant="default" size="sm">
               BOOK A TABLE
@@ -81,6 +92,16 @@ export function SiteHeader() {
                   BOOK A TABLE
                 </Button>
               </BookATableDialog>
+              <Button
+                variant="outline"
+                size="sm"
+                onClick={toggleTheme}
+                className="mt-2 gap-2"
+                aria-label={theme === "dark" ? "Switch to light mode" : "Switch to dark mode"}
+              >
+                {theme === "dark" ? <Sun className="size-4" /> : <Moon className="size-4" />}
+                {theme === "dark" ? "Light mode" : "Dark mode"}
+              </Button>
             </nav>
           </SheetContent>
         </Sheet>
