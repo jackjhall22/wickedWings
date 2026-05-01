@@ -1,0 +1,293 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Wicked Wings</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:wght@400;500;600;700&amp;family=Space+Grotesk:wght@400;500;600;700;800;900&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+          darkMode: "class",
+          theme: {
+            extend: {
+              "colors": {
+                      "secondary-fixed-dim": "#2ae500",
+                      "inverse-primary": "#ae3200",
+                      "error-container": "#93000a",
+                      "surface-variant": "#333538",
+                      "on-tertiary-container": "#5b000f",
+                      "tertiary-fixed-dim": "#ffb3b2",
+                      "on-secondary-container": "#0f6d00",
+                      "surface-container-high": "#282a2d",
+                      "tertiary": "#ffb3b2",
+                      "secondary-fixed": "#79ff5b",
+                      "primary-container": "#ff571a",
+                      "on-tertiary": "#680012",
+                      "surface-tint": "#ffb59e",
+                      "surface-bright": "#37393c",
+                      "on-primary-fixed": "#3a0b00",
+                      "secondary-container": "#2ff801",
+                      "primary": "#ffb59e",
+                      "on-background": "#e2e2e6",
+                      "on-primary-fixed-variant": "#852400",
+                      "on-tertiary-fixed-variant": "#92001e",
+                      "on-error": "#690005",
+                      "surface-container-highest": "#333538",
+                      "on-error-container": "#ffdad6",
+                      "primary-fixed": "#ffdbd0",
+                      "surface-container": "#1e2023",
+                      "surface-dim": "#111316",
+                      "error": "#ffb4ab",
+                      "outline-variant": "#5c4037",
+                      "on-secondary-fixed": "#022100",
+                      "on-tertiary-fixed": "#410008",
+                      "inverse-on-surface": "#2f3034",
+                      "tertiary-fixed": "#ffdad8",
+                      "inverse-surface": "#e2e2e6",
+                      "background": "#111316",
+                      "on-secondary": "#053900",
+                      "primary-fixed-dim": "#ffb59e",
+                      "secondary": "#d7ffc5",
+                      "on-secondary-fixed-variant": "#095300",
+                      "on-surface-variant": "#e6beb2",
+                      "outline": "#ad897e",
+                      "on-primary": "#5e1700",
+                      "surface-container-lowest": "#0c0e11",
+                      "tertiary-container": "#ff525c",
+                      "surface-container-low": "#1a1c1f",
+                      "surface": "#111316",
+                      "on-primary-container": "#521300",
+                      "on-surface": "#e2e2e6"
+              },
+              "borderRadius": {
+                      "DEFAULT": "0.125rem",
+                      "lg": "0.25rem",
+                      "xl": "0.5rem",
+                      "full": "0.75rem"
+              },
+              "spacing": {
+                      "sm": "12px",
+                      "gutter": "24px",
+                      "base": "8px",
+                      "xs": "4px",
+                      "xl": "80px",
+                      "lg": "48px",
+                      "margin": "32px",
+                      "md": "24px"
+              },
+              "fontFamily": {
+                      "body-lg": [
+                              "beVietnamPro"
+                      ],
+                      "headline-md": [
+                              "Space Grotesk"
+                      ],
+                      "headline-xl": [
+                              "Space Grotesk"
+                      ],
+                      "headline-lg": [
+                              "Space Grotesk"
+                      ],
+                      "body-md": [
+                              "beVietnamPro"
+                      ],
+                      "label-bold": [
+                              "Space Grotesk"
+                      ]
+              },
+              "fontSize": {
+                      "body-lg": [
+                              "18px",
+                              {
+                                      "lineHeight": "1.6",
+                                      "fontWeight": "400"
+                              }
+                      ],
+                      "headline-md": [
+                              "24px",
+                              {
+                                      "lineHeight": "1.3",
+                                      "fontWeight": "600"
+                              }
+                      ],
+                      "headline-xl": [
+                              "64px",
+                              {
+                                      "lineHeight": "1.1",
+                                      "letterSpacing": "-0.04em",
+                                      "fontWeight": "700"
+                              }
+                      ],
+                      "headline-lg": [
+                              "40px",
+                              {
+                                      "lineHeight": "1.2",
+                                      "letterSpacing": "-0.02em",
+                                      "fontWeight": "700"
+                              }
+                      ],
+                      "body-md": [
+                              "16px",
+                              {
+                                      "lineHeight": "1.6",
+                                      "fontWeight": "400"
+                              }
+                      ],
+                      "label-bold": [
+                              "14px",
+                              {
+                                      "lineHeight": "1.0",
+                                      "fontWeight": "700"
+                              }
+                      ]
+              }
+      },
+          },
+        }
+      </script>
+</head>
+<body class="bg-background text-on-background antialiased selection:bg-primary selection:text-on-primary">
+<!-- TopAppBar -->
+<nav class="fixed top-0 left-0 w-full z-50 flex justify-between items-center px-6 h-20 md:px-12 bg-zinc-950/80 backdrop-blur-xl border-b border-white/10 shadow-[0_4px_20px_rgba(0,0,0,0.5)]">
+<a class="text-2xl font-black italic tracking-tighter text-orange-600 font-['Space_Grotesk']" href="#">
+            WICKED WINGS
+        </a>
+<div class="hidden md:flex items-center gap-gutter">
+<a class="text-orange-500 border-b-2 border-orange-600 pb-1 font-label-bold text-label-bold hover:text-orange-400 transition-colors duration-200" href="#">
+                    Home
+                </a>
+<a class="text-zinc-400 font-medium font-label-bold text-label-bold hover:text-orange-400 transition-colors duration-200" href="#">
+                    Menu
+                </a>
+<a class="text-zinc-400 font-medium font-label-bold text-label-bold hover:text-orange-400 transition-colors duration-200" href="#">
+                    Events
+                </a>
+<a class="text-zinc-400 font-medium font-label-bold text-label-bold hover:text-orange-400 transition-colors duration-200" href="#">
+                    Contact
+                </a>
+</div>
+<button class="bg-primary-container text-black font-label-bold text-label-bold px-gutter py-sm rounded-DEFAULT hover:opacity-80 transition-all uppercase hidden md:block">
+            BOOK A TABLE
+        </button>
+<button class="md:hidden text-orange-600">
+<span class="material-symbols-outlined text-3xl">menu</span>
+</button>
+</nav>
+<main class="pt-20">
+<!-- Hero Section -->
+<section class="relative min-h-[921px] flex items-center justify-center px-6 py-xl overflow-hidden">
+<div class="absolute inset-0 z-0">
+<img alt="Hero Background" class="w-full h-full object-cover opacity-30" data-alt="A moody, high-contrast shot of a bustling sports bar at night. Neon signs cast a glowing orange light across dark wooden tables. Patrons are blurred in motion, creating a dynamic, energetic vibe. The lighting is cinematic, focusing on the vibrant primary colors against deep blacks, perfectly aligning with the dark-mode aesthetic." src="https://lh3.googleusercontent.com/aida-public/AB6AXuDbXf0OxbSkzYlPzy_GQ9Fz4IVY5IqbKTrlL5WqmaHdhX_WYu_vOq5n5MqUDtdU8BxQY3nA2f9OkxTlIaY1rypPxiYUM6WG8sAqtWcOulclwcHHuJXSrK5m2CWg_PNDlueUZLOk0s5xlc_5-w-uAEDqPwhhbkbwQ_DYQsCSemmvKqS_Occ2ib658vo8EAVQKdd6Lte6Y-lPYfVN7DItnVruuKdyAXp5U5JgdJiWbac3lRM39Gn7qf6F4-oV5aRc_yOCWmt-IpYVfHc"/>
+<div class="absolute inset-0 bg-gradient-to-t from-background via-background/80 to-transparent"></div>
+</div>
+<div class="relative z-10 text-center max-w-4xl mx-auto flex flex-col items-center gap-lg">
+<h1 class="font-headline-xl text-headline-xl text-on-background uppercase drop-shadow-[0_0_15px_rgba(255,87,26,0.3)]">
+                    Wings. Drinks. <br/><span class="text-primary-container">Pure Vibes.</span>
+</h1>
+<p class="font-body-lg text-body-lg text-on-surface-variant max-w-2xl">
+                    Experience the ultimate game night. High-voltage energy, killer wings, and ice-cold drafts in the heart of the city.
+                </p>
+<div class="flex flex-wrap justify-center gap-md">
+<button class="bg-primary-container text-black font-label-bold text-label-bold px-8 py-4 rounded-DEFAULT hover:shadow-[0_0_20px_rgba(255,87,26,0.6)] transition-all uppercase">
+                        Book a Table
+                    </button>
+<button class="border-2 border-primary-container text-on-background font-label-bold text-label-bold px-8 py-4 rounded-DEFAULT hover:bg-primary-container/10 transition-all uppercase">
+                        View Menu
+                    </button>
+</div>
+</div>
+</section>
+<!-- About Us -->
+<section class="py-xl px-6 md:px-12 max-w-7xl mx-auto">
+<div class="grid grid-cols-1 md:grid-cols-2 gap-xl items-center">
+<div class="space-y-md">
+<h2 class="font-headline-lg text-headline-lg text-on-background uppercase border-l-4 border-primary-container pl-4">
+                        Not Your Average Sports Bar
+                    </h2>
+<p class="font-body-md text-body-md text-on-surface-variant">
+                        We stripped away the polite dining rules and built a sanctuary for true fans. Wicked Wings is about the raw energy of the game, paired with unapologetically bold flavors. Our space is designed to immerse you in the action, with screens visible from every angle and an atmosphere that crackles with electricity.
+                    </p>
+<p class="font-body-md text-body-md text-on-surface-variant">
+                        Whether you're here for the main event or just soaking in the weekend vibes, we serve up high-octane experiences every night.
+                    </p>
+</div>
+<div class="relative h-[400px] rounded-lg overflow-hidden border border-white/10 group">
+<img alt="Bar Atmosphere" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500 opacity-80" data-alt="A close-up shot of a bartender pouring a draft beer in a dimly lit, atmospheric bar setting. The glowing neon orange light from a nearby sign reflects off the glassware and taps. The background is a dark, moody blur of bottles and patrons, establishing the bold, modern brutalist style." src="https://lh3.googleusercontent.com/aida-public/AB6AXuCCsgDVzMR41oRkqYfloKBdXq_0l_6kvgpdX7Znr7-PsEdZYs4a4H7aMyQJIBOjKlACxPNXzlj-Jb7rv261wKxQ0kRHneiO522PDBG4fWi9tSvFbhJp4SRCseMgImNcTzcHiw1dZo2uNEO8tu8cNQqWn5gZK7gBcSzZWmc3k4KKyBsl2F1XVpjVowe7Is5ZzqJQ6kq0UclR9xtJyp62AlpWeqTU_KqeNYfU2OMMHOg_7f3taH4KXUeph_J_HGeRj7BV_TAFSWD7oTA"/>
+<div class="absolute inset-0 ring-1 ring-inset ring-white/10 rounded-lg"></div>
+</div>
+</div>
+</section>
+<!-- Quick Menu Teaser -->
+<section class="py-xl px-6 md:px-12 bg-surface-container-low border-y border-white/5">
+<div class="max-w-7xl mx-auto">
+<div class="flex flex-col md:flex-row justify-between items-end mb-lg gap-sm">
+<div>
+<h2 class="font-headline-lg text-headline-lg text-on-background uppercase">Fuel the Fire</h2>
+<p class="font-body-md text-body-md text-on-surface-variant mt-xs">Legendary wings &amp; ice-cold drafts.</p>
+</div>
+<a class="font-label-bold text-label-bold text-primary-container hover:underline underline-offset-4 flex items-center gap-xs" href="#">
+                        SEE FULL MENU <span class="material-symbols-outlined text-sm">arrow_forward</span>
+</a>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-3 gap-gutter">
+<!-- Menu Item 1 -->
+<div class="bg-surface-container p-md rounded-lg border border-white/10 hover:border-primary-container/50 hover:shadow-[0_0_15px_rgba(255,87,26,0.15)] transition-all group">
+<div class="flex justify-between items-start mb-sm">
+<h3 class="font-headline-md text-headline-md text-on-background">Wicked Classic</h3>
+<span class="font-label-bold text-label-bold text-secondary-fixed-dim">$14.99</span>
+</div>
+<p class="font-body-md text-body-md text-on-surface-variant mb-md">Our signature buffalo blend. Perfectly balanced heat and tang.</p>
+<div class="flex gap-xs">
+<span class="bg-surface-variant text-on-background text-[10px] font-label-bold px-2 py-1 rounded uppercase">Bone-in</span>
+<span class="bg-error-container text-on-error-container text-[10px] font-label-bold px-2 py-1 rounded uppercase">Medium</span>
+</div>
+</div>
+<!-- Menu Item 2 -->
+<div class="bg-surface-container p-md rounded-lg border border-white/10 hover:border-primary-container/50 hover:shadow-[0_0_15px_rgba(255,87,26,0.15)] transition-all group">
+<div class="flex justify-between items-start mb-sm">
+<h3 class="font-headline-md text-headline-md text-on-background">Hellfire Habanero</h3>
+<span class="font-label-bold text-label-bold text-secondary-fixed-dim">$16.99</span>
+</div>
+<p class="font-body-md text-body-md text-on-surface-variant mb-md">Smoked habanero glaze that bites back. Not for the faint of heart.</p>
+<div class="flex gap-xs">
+<span class="bg-surface-variant text-on-background text-[10px] font-label-bold px-2 py-1 rounded uppercase">Boneless</span>
+<span class="bg-error text-on-error text-[10px] font-label-bold px-2 py-1 rounded uppercase">X-HOT</span>
+</div>
+</div>
+<!-- Menu Item 3 -->
+<div class="bg-surface-container p-md rounded-lg border border-white/10 hover:border-primary-container/50 hover:shadow-[0_0_15px_rgba(255,87,26,0.15)] transition-all group">
+<div class="flex justify-between items-start mb-sm">
+<h3 class="font-headline-md text-headline-md text-on-background">Garlic Parm Truffle</h3>
+<span class="font-label-bold text-label-bold text-secondary-fixed-dim">$15.99</span>
+</div>
+<p class="font-body-md text-body-md text-on-surface-variant mb-md">Rich roasted garlic, aged parmesan, and a hit of truffle oil.</p>
+<div class="flex gap-xs">
+<span class="bg-surface-variant text-on-background text-[10px] font-label-bold px-2 py-1 rounded uppercase">Dry Rub</span>
+<span class="bg-surface-bright text-on-surface text-[10px] font-label-bold px-2 py-1 rounded uppercase">Mild</span>
+</div>
+</div>
+</div>
+</div>
+</section>
+</main>
+<!-- Footer -->
+<footer class="w-full border-t border-zinc-900 bg-zinc-950 py-12 px-6 flex flex-col md:flex-row justify-between items-center gap-6">
+<div class="text-lg font-black text-white font-['Space_Grotesk']">
+            WICKED WINGS
+        </div>
+<div class="flex flex-wrap justify-center gap-gutter">
+<a class="text-zinc-500 font-['Space_Grotesk'] text-xs tracking-widest uppercase hover:text-orange-500 transition-colors hover:underline underline-offset-4" href="#">Privacy</a>
+<a class="text-zinc-500 font-['Space_Grotesk'] text-xs tracking-widest uppercase hover:text-orange-500 transition-colors hover:underline underline-offset-4" href="#">Terms</a>
+<a class="text-zinc-500 font-['Space_Grotesk'] text-xs tracking-widest uppercase hover:text-orange-500 transition-colors hover:underline underline-offset-4" href="#">Careers</a>
+<a class="text-zinc-500 font-['Space_Grotesk'] text-xs tracking-widest uppercase hover:text-orange-500 transition-colors hover:underline underline-offset-4" href="#">Contact</a>
+</div>
+<div class="font-['Space_Grotesk'] text-xs tracking-widest uppercase text-zinc-500">
+            © 2024 WICKED WINGS AUSTIN. OPEN UNTIL 2AM.
+        </div>
+</footer>
+</body></html>

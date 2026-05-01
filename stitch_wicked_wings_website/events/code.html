@@ -1,0 +1,309 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Events - Wicked Wings</title>
+<!-- Google Fonts -->
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:wght@400;600&amp;family=Space+Grotesk:wght@600;700&amp;display=swap" rel="stylesheet"/>
+<!-- Material Symbols -->
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+    </style>
+<!-- Tailwind CSS -->
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<!-- Theme Configuration -->
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            "colors": {
+                    "secondary-fixed-dim": "#2ae500",
+                    "inverse-primary": "#ae3200",
+                    "error-container": "#93000a",
+                    "surface-variant": "#333538",
+                    "on-tertiary-container": "#5b000f",
+                    "tertiary-fixed-dim": "#ffb3b2",
+                    "on-secondary-container": "#0f6d00",
+                    "surface-container-high": "#282a2d",
+                    "tertiary": "#ffb3b2",
+                    "secondary-fixed": "#79ff5b",
+                    "primary-container": "#ff571a",
+                    "on-tertiary": "#680012",
+                    "surface-tint": "#ffb59e",
+                    "surface-bright": "#37393c",
+                    "on-primary-fixed": "#3a0b00",
+                    "secondary-container": "#2ff801",
+                    "primary": "#ffb59e",
+                    "on-background": "#e2e2e6",
+                    "on-primary-fixed-variant": "#852400",
+                    "on-tertiary-fixed-variant": "#92001e",
+                    "on-error": "#690005",
+                    "surface-container-highest": "#333538",
+                    "on-error-container": "#ffdad6",
+                    "primary-fixed": "#ffdbd0",
+                    "surface-container": "#1e2023",
+                    "surface-dim": "#111316",
+                    "error": "#ffb4ab",
+                    "outline-variant": "#5c4037",
+                    "on-secondary-fixed": "#022100",
+                    "on-tertiary-fixed": "#410008",
+                    "inverse-on-surface": "#2f3034",
+                    "tertiary-fixed": "#ffdad8",
+                    "inverse-surface": "#e2e2e6",
+                    "background": "#111316",
+                    "on-secondary": "#053900",
+                    "primary-fixed-dim": "#ffb59e",
+                    "secondary": "#d7ffc5",
+                    "on-secondary-fixed-variant": "#095300",
+                    "on-surface-variant": "#e6beb2",
+                    "outline": "#ad897e",
+                    "on-primary": "#5e1700",
+                    "surface-container-lowest": "#0c0e11",
+                    "tertiary-container": "#ff525c",
+                    "surface-container-low": "#1a1c1f",
+                    "surface": "#111316",
+                    "on-primary-container": "#521300",
+                    "on-surface": "#e2e2e6"
+            },
+            "borderRadius": {
+                    "DEFAULT": "0.125rem",
+                    "lg": "0.25rem",
+                    "xl": "0.5rem",
+                    "full": "0.75rem"
+            },
+            "spacing": {
+                    "sm": "12px",
+                    "gutter": "24px",
+                    "base": "8px",
+                    "xs": "4px",
+                    "xl": "80px",
+                    "lg": "48px",
+                    "margin": "32px",
+                    "md": "24px"
+            },
+            "fontFamily": {
+                    "body-lg": ["Be Vietnam Pro"],
+                    "headline-md": ["Space Grotesk"],
+                    "headline-xl": ["Space Grotesk"],
+                    "headline-lg": ["Space Grotesk"],
+                    "body-md": ["Be Vietnam Pro"],
+                    "label-bold": ["Space Grotesk"]
+            },
+            "fontSize": {
+                    "body-lg": ["18px", {"lineHeight": "1.6", "fontWeight": "400"}],
+                    "headline-md": ["24px", {"lineHeight": "1.3", "fontWeight": "600"}],
+                    "headline-xl": ["64px", {"lineHeight": "1.1", "letterSpacing": "-0.04em", "fontWeight": "700"}],
+                    "headline-lg": ["40px", {"lineHeight": "1.2", "letterSpacing": "-0.02em", "fontWeight": "700"}],
+                    "body-md": ["16px", {"lineHeight": "1.6", "fontWeight": "400"}],
+                    "label-bold": ["14px", {"lineHeight": "1.0", "fontWeight": "700"}]
+            }
+          }
+        }
+      }
+    </script>
+</head>
+<body class="bg-background text-on-background font-body-lg min-h-screen flex flex-col selection:bg-primary-container selection:text-on-primary-container">
+<!-- TopAppBar -->
+<header class="fixed top-0 left-0 w-full z-50 flex flex-col md:flex-row justify-between items-center px-6 h-auto md:h-20 md:px-12 bg-surface-dim/90 backdrop-blur-xl border-b border-inverse-on-surface shadow-[0_4px_20px_rgba(0,0,0,0.5)] py-4 md:py-0 transition-all">
+<a class="font-headline-lg text-headline-lg italic tracking-tighter text-primary-container mb-4 md:mb-0 block" href="#">
+            WICKED WINGS
+        </a>
+<!-- Desktop Nav -->
+<nav class="hidden md:flex gap-8 items-center">
+<a class="font-label-bold text-label-bold text-on-surface-variant hover:text-primary-container transition-colors duration-200 uppercase tracking-widest" href="#">Home</a>
+<a class="font-label-bold text-label-bold text-on-surface-variant hover:text-primary-container transition-colors duration-200 uppercase tracking-widest" href="#">Menu</a>
+<a class="font-label-bold text-label-bold text-primary-container border-b-2 border-primary-container pb-1 uppercase tracking-widest shadow-[0_4px_15px_rgba(255,87,26,0.3)]" href="#">Events</a>
+<a class="font-label-bold text-label-bold text-on-surface-variant hover:text-primary-container transition-colors duration-200 uppercase tracking-widest" href="#">Contact</a>
+</nav>
+<button class="hidden md:block bg-primary-container text-on-primary-container font-label-bold text-label-bold px-6 py-3 rounded-DEFAULT hover:bg-primary hover:shadow-[0_0_15px_rgba(255,87,26,0.5)] transition-all uppercase tracking-wider">
+            BOOK A TABLE
+        </button>
+</header>
+<!-- Mobile Bottom Nav Bar (Appears md:hidden) -->
+<nav class="md:hidden fixed bottom-0 left-0 w-full z-50 bg-surface-container border-t border-inverse-on-surface flex justify-around items-center h-16 pb-safe">
+<a class="flex flex-col items-center gap-1 text-on-surface-variant hover:text-primary-container transition-colors" href="#">
+<span class="material-symbols-outlined text-[24px]">home</span>
+<span class="font-label-bold text-[10px] uppercase tracking-wider">Home</span>
+</a>
+<a class="flex flex-col items-center gap-1 text-on-surface-variant hover:text-primary-container transition-colors" href="#">
+<span class="material-symbols-outlined text-[24px]">restaurant_menu</span>
+<span class="font-label-bold text-[10px] uppercase tracking-wider">Menu</span>
+</a>
+<a class="flex flex-col items-center gap-1 text-primary-container" href="#">
+<span class="material-symbols-outlined text-[24px]" style="font-variation-settings: 'FILL' 1;">calendar_today</span>
+<span class="font-label-bold text-[10px] uppercase tracking-wider">Events</span>
+</a>
+<a class="flex flex-col items-center gap-1 text-on-surface-variant hover:text-primary-container transition-colors" href="#">
+<span class="material-symbols-outlined text-[24px]">call</span>
+<span class="font-label-bold text-[10px] uppercase tracking-wider">Contact</span>
+</a>
+</nav>
+<!-- Main Content Canvas -->
+<main class="flex-grow pt-24 md:pt-20 pb-20 md:pb-0">
+<!-- Hero Section -->
+<section class="relative w-full min-h-[512px] flex items-center justify-center border-b border-inverse-on-surface overflow-hidden">
+<!-- Background Image with Overlay -->
+<div class="absolute inset-0 z-0">
+<div class="absolute inset-0 bg-gradient-to-t from-background via-background/80 to-transparent z-10"></div>
+<div class="absolute inset-0 bg-[url('https://images.unsplash.com/photo-1514933651103-005eec06c04b?q=80&amp;w=2874&amp;auto=format&amp;fit=crop')] bg-cover bg-center opacity-40 mix-blend-luminosity" data-alt="A wide, dynamic shot of a crowded, high-energy sports bar at night. The atmosphere is loud, immersive, and uninhibited, featuring dark, textured industrial walls. The scene is heavily illuminated by the vibrant, glowing light of neon signs in sharp orange and electric green, casting deep shadows and dramatic highlights. Large TV screens broadcast a game in the background, casting a cool blue glow over the silhouetted figures of patrons raising glasses and socializing. The aesthetic is modern brutalism meets premium dive bar, highly cinematic and atmospheric.">
+</div>
+</div>
+<div class="relative z-20 text-center px-gutter flex flex-col items-center gap-sm mt-12 md:mt-0">
+<div class="inline-flex items-center gap-2 bg-error-container/30 border border-error/50 px-4 py-2 rounded-full mb-4">
+<span class="w-2 h-2 rounded-full bg-error animate-pulse"></span>
+<span class="font-label-bold text-label-bold text-error uppercase tracking-widest">Always Loud</span>
+</div>
+<h1 class="font-headline-xl text-headline-xl text-on-background uppercase tracking-tighter drop-shadow-[0_0_20px_rgba(255,87,26,0.3)]">
+                    THE LINEUP
+                </h1>
+<p class="font-headline-md text-headline-md text-primary-container max-w-2xl mx-auto uppercase mt-4">
+                    KITCHEN &amp; BAR OPEN UNTIL 2AM. EVERY. DAMN. NIGHT.
+                </p>
+</div>
+</section>
+<!-- Events Grid Section -->
+<section class="py-lg px-gutter max-w-7xl mx-auto">
+<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-gutter">
+<!-- Event Card: Monday -->
+<article class="bg-surface-container border border-outline-variant rounded-lg flex overflow-hidden group hover:shadow-[0_0_25px_rgba(255,87,26,0.15)] hover:border-primary-container/50 transition-all duration-300 relative">
+<!-- Ticket Notch Left -->
+<div class="w-3 bg-error-container flex-shrink-0 relative overflow-hidden">
+<div class="absolute inset-0 bg-[linear-gradient(45deg,transparent_25%,rgba(255,255,255,0.1)_25%,rgba(255,255,255,0.1)_50%,transparent_50%,transparent_75%,rgba(255,255,255,0.1)_75%,rgba(255,255,255,0.1)_100%)] bg-[length:10px_10px]"></div>
+</div>
+<div class="p-md flex flex-col w-full z-10">
+<div class="flex justify-between items-start mb-sm border-b border-inverse-on-surface pb-3">
+<span class="font-label-bold text-label-bold text-on-surface-variant uppercase tracking-widest">Monday</span>
+<span class="font-label-bold text-label-bold text-secondary-fixed bg-secondary-fixed/10 px-2 py-1 rounded">7:00 PM</span>
+</div>
+<h3 class="font-headline-md text-headline-md text-on-background mb-2 uppercase group-hover:text-primary-container transition-colors">
+                            Cornhole Tournament
+                        </h3>
+<p class="font-body-md text-body-md text-on-surface-variant mb-md flex-grow">
+                            Start the week throwing bags. Cash prizes for the winning team, bragging rights for everyone else. Registration opens at 6PM.
+                        </p>
+<button class="self-start bg-transparent border-2 border-primary-container text-on-background px-6 py-2 font-label-bold text-label-bold rounded-DEFAULT hover:bg-primary-container hover:text-on-primary-container transition-colors uppercase tracking-widest flex items-center gap-2">
+<span>Notify Me</span>
+<span class="material-symbols-outlined text-[18px]">notifications</span>
+</button>
+</div>
+</article>
+<!-- Event Card: Tuesday -->
+<article class="bg-surface-container border border-outline-variant rounded-lg flex overflow-hidden group hover:shadow-[0_0_25px_rgba(255,87,26,0.15)] hover:border-primary-container/50 transition-all duration-300">
+<div class="w-3 bg-tertiary-container flex-shrink-0 relative overflow-hidden">
+<div class="absolute inset-0 bg-[linear-gradient(45deg,transparent_25%,rgba(255,255,255,0.1)_25%,rgba(255,255,255,0.1)_50%,transparent_50%,transparent_75%,rgba(255,255,255,0.1)_75%,rgba(255,255,255,0.1)_100%)] bg-[length:10px_10px]"></div>
+</div>
+<div class="p-md flex flex-col w-full z-10">
+<div class="flex justify-between items-start mb-sm border-b border-inverse-on-surface pb-3">
+<span class="font-label-bold text-label-bold text-on-surface-variant uppercase tracking-widest">Tuesday</span>
+<span class="font-label-bold text-label-bold text-secondary-fixed bg-secondary-fixed/10 px-2 py-1 rounded">9:00 PM</span>
+</div>
+<h3 class="font-headline-md text-headline-md text-on-background mb-2 uppercase group-hover:text-primary-container transition-colors">
+                            Karaoke Night
+                        </h3>
+<p class="font-body-md text-body-md text-on-surface-variant mb-md flex-grow">
+                            Liquid courage provided. Step up to the mic and belt out your go-to anthem. 
+                        </p>
+<button class="self-start bg-transparent border-2 border-primary-container text-on-background px-6 py-2 font-label-bold text-label-bold rounded-DEFAULT hover:bg-primary-container hover:text-on-primary-container transition-colors uppercase tracking-widest flex items-center gap-2">
+<span>Notify Me</span>
+<span class="material-symbols-outlined text-[18px]">notifications</span>
+</button>
+</div>
+</article>
+<!-- Event Card: Thursday -->
+<article class="bg-surface-container border border-outline-variant rounded-lg flex overflow-hidden group hover:shadow-[0_0_25px_rgba(255,87,26,0.15)] hover:border-primary-container/50 transition-all duration-300 md:col-span-2 lg:col-span-1">
+<div class="w-3 bg-primary-container flex-shrink-0 relative overflow-hidden">
+<div class="absolute inset-0 bg-[linear-gradient(45deg,transparent_25%,rgba(0,0,0,0.2)_25%,rgba(0,0,0,0.2)_50%,transparent_50%,transparent_75%,rgba(0,0,0,0.2)_75%,rgba(0,0,0,0.2)_100%)] bg-[length:10px_10px]"></div>
+</div>
+<div class="p-md flex flex-col w-full z-10">
+<div class="flex justify-between items-start mb-sm border-b border-inverse-on-surface pb-3">
+<span class="font-label-bold text-label-bold text-on-surface-variant uppercase tracking-widest">Thursday</span>
+<span class="font-label-bold text-label-bold text-secondary-fixed bg-secondary-fixed/10 px-2 py-1 rounded">10:00 PM</span>
+</div>
+<h3 class="font-headline-md text-headline-md text-on-background mb-2 uppercase group-hover:text-primary-container transition-colors">
+                            Live DJ Set
+                        </h3>
+<p class="font-body-md text-body-md text-on-surface-variant mb-md flex-grow">
+                            Pre-game the weekend. Local guest DJs spinning high-energy sets to keep the floor moving until 2AM.
+                        </p>
+<button class="self-start bg-transparent border-2 border-primary-container text-on-background px-6 py-2 font-label-bold text-label-bold rounded-DEFAULT hover:bg-primary-container hover:text-on-primary-container transition-colors uppercase tracking-widest flex items-center gap-2">
+<span>Notify Me</span>
+<span class="material-symbols-outlined text-[18px]">notifications</span>
+</button>
+</div>
+</article>
+<!-- Event Card: Friday -->
+<article class="bg-surface-container border border-outline-variant rounded-lg flex overflow-hidden group hover:shadow-[0_0_25px_rgba(255,87,26,0.15)] hover:border-primary-container/50 transition-all duration-300 lg:col-span-2">
+<div class="w-3 bg-tertiary-container flex-shrink-0 relative overflow-hidden">
+<div class="absolute inset-0 bg-[linear-gradient(45deg,transparent_25%,rgba(255,255,255,0.1)_25%,rgba(255,255,255,0.1)_50%,transparent_50%,transparent_75%,rgba(255,255,255,0.1)_75%,rgba(255,255,255,0.1)_100%)] bg-[length:10px_10px]"></div>
+</div>
+<div class="p-md flex flex-col md:flex-row w-full z-10 gap-6">
+<div class="flex-grow flex flex-col">
+<div class="flex justify-between items-start mb-sm border-b border-inverse-on-surface pb-3">
+<span class="font-label-bold text-label-bold text-on-surface-variant uppercase tracking-widest">Friday</span>
+<span class="font-label-bold text-label-bold text-secondary-fixed bg-secondary-fixed/10 px-2 py-1 rounded">9:30 PM</span>
+</div>
+<h3 class="font-headline-md text-headline-md text-on-background mb-2 uppercase group-hover:text-primary-container transition-colors">
+                                Friday Night Karaoke
+                            </h3>
+<p class="font-body-md text-body-md text-on-surface-variant mb-md flex-grow max-w-lg">
+                                The main event. The room is packed, the drinks are flowing, and the stage is yours. Get here early to get your name on the list.
+                            </p>
+<button class="self-start bg-transparent border-2 border-primary-container text-on-background px-6 py-2 font-label-bold text-label-bold rounded-DEFAULT hover:bg-primary-container hover:text-on-primary-container transition-colors uppercase tracking-widest flex items-center gap-2">
+<span>Notify Me</span>
+<span class="material-symbols-outlined text-[18px]">notifications</span>
+</button>
+</div>
+<div class="hidden md:block w-48 h-full bg-surface-dim rounded border border-inverse-on-surface overflow-hidden relative">
+<div class="absolute inset-0 bg-[url('https://images.unsplash.com/photo-1516280440504-7c59b20b2268?q=80&amp;w=2938&amp;auto=format&amp;fit=crop')] bg-cover bg-center opacity-50 mix-blend-screen" data-alt="Close up shot of a microphone on a stand in a dark, atmospheric venue. The microphone is sharply focused, catching the harsh, vibrant neon glow of red and blue lights from off-stage. The background is a soft blur of dark shapes and light streaks, suggesting a crowded, high-energy room ready for a loud performance. The overall style is modern, raw, and high-contrast."></div>
+</div>
+</div>
+</article>
+<!-- Event Card: Sunday -->
+<article class="bg-surface-container border border-outline-variant rounded-lg flex overflow-hidden group hover:shadow-[0_0_25px_rgba(255,87,26,0.15)] hover:border-primary-container/50 transition-all duration-300">
+<div class="w-3 bg-secondary-fixed-dim flex-shrink-0 relative overflow-hidden">
+<div class="absolute inset-0 bg-[linear-gradient(45deg,transparent_25%,rgba(0,0,0,0.2)_25%,rgba(0,0,0,0.2)_50%,transparent_50%,transparent_75%,rgba(0,0,0,0.2)_75%,rgba(0,0,0,0.2)_100%)] bg-[length:10px_10px]"></div>
+</div>
+<div class="p-md flex flex-col w-full z-10">
+<div class="flex justify-between items-start mb-sm border-b border-inverse-on-surface pb-3">
+<span class="font-label-bold text-label-bold text-on-surface-variant uppercase tracking-widest">Sunday</span>
+<span class="font-label-bold text-label-bold text-secondary-fixed bg-secondary-fixed/10 px-2 py-1 rounded">8:00 PM</span>
+</div>
+<h3 class="font-headline-md text-headline-md text-on-background mb-2 uppercase group-hover:text-primary-container transition-colors">
+                            Karaoke &amp; DJ Closeout
+                        </h3>
+<p class="font-body-md text-body-md text-on-surface-variant mb-md flex-grow">
+                            End the weekend loud. We mix open-mic karaoke with live DJ sets until the lights come on at 2AM. Industry night specials applied.
+                        </p>
+<button class="self-start bg-transparent border-2 border-primary-container text-on-background px-6 py-2 font-label-bold text-label-bold rounded-DEFAULT hover:bg-primary-container hover:text-on-primary-container transition-colors uppercase tracking-widest flex items-center gap-2">
+<span>Notify Me</span>
+<span class="material-symbols-outlined text-[18px]">notifications</span>
+</button>
+</div>
+</article>
+</div>
+</section>
+</main>
+<!-- Footer -->
+<footer class="w-full py-12 px-6 flex flex-col md:flex-row justify-between items-center gap-6 bg-surface border-t border-inverse-on-surface z-10 relative">
+<div class="text-lg font-headline-lg font-black text-on-background italic tracking-tighter uppercase">
+            WICKED WINGS
+        </div>
+<div class="flex gap-6 flex-wrap justify-center">
+<a class="font-label-bold text-label-bold text-on-surface-variant hover:text-primary-container hover:underline underline-offset-4 transition-colors uppercase tracking-widest" href="#">Privacy</a>
+<a class="font-label-bold text-label-bold text-on-surface-variant hover:text-primary-container hover:underline underline-offset-4 transition-colors uppercase tracking-widest" href="#">Terms</a>
+<a class="font-label-bold text-label-bold text-on-surface-variant hover:text-primary-container hover:underline underline-offset-4 transition-colors uppercase tracking-widest" href="#">Careers</a>
+<a class="font-label-bold text-label-bold text-on-surface-variant hover:text-primary-container hover:underline underline-offset-4 transition-colors uppercase tracking-widest" href="#">Contact</a>
+</div>
+<div class="font-label-bold text-xs tracking-widest uppercase text-on-surface-variant/70 text-center md:text-right">
+            © 2024 WICKED WINGS AUSTIN. OPEN UNTIL 2AM.
+        </div>
+</footer>
+</body></html>

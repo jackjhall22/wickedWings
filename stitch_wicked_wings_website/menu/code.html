@@ -1,0 +1,438 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Wicked Wings - Menu</title>
+<!-- Material Symbols -->
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<!-- Google Fonts for Brand Typography -->
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;600;700;900&amp;family=Be+Vietnam+Pro:wght@400;600&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<script id="tailwind-config">
+        tailwind.config = {
+          darkMode: "class",
+          theme: {
+            extend: {
+              "colors": {
+                      "secondary-fixed-dim": "#2ae500",
+                      "inverse-primary": "#ae3200",
+                      "error-container": "#93000a",
+                      "surface-variant": "#333538",
+                      "on-tertiary-container": "#5b000f",
+                      "tertiary-fixed-dim": "#ffb3b2",
+                      "on-secondary-container": "#0f6d00",
+                      "surface-container-high": "#282a2d",
+                      "tertiary": "#ffb3b2",
+                      "secondary-fixed": "#79ff5b",
+                      "primary-container": "#ff571a",
+                      "on-tertiary": "#680012",
+                      "surface-tint": "#ffb59e",
+                      "surface-bright": "#37393c",
+                      "on-primary-fixed": "#3a0b00",
+                      "secondary-container": "#2ff801",
+                      "primary": "#ffb59e",
+                      "on-background": "#e2e2e6",
+                      "on-primary-fixed-variant": "#852400",
+                      "on-tertiary-fixed-variant": "#92001e",
+                      "on-error": "#690005",
+                      "surface-container-highest": "#333538",
+                      "on-error-container": "#ffdad6",
+                      "primary-fixed": "#ffdbd0",
+                      "surface-container": "#1e2023",
+                      "surface-dim": "#111316",
+                      "error": "#ffb4ab",
+                      "outline-variant": "#5c4037",
+                      "on-secondary-fixed": "#022100",
+                      "on-tertiary-fixed": "#410008",
+                      "inverse-on-surface": "#2f3034",
+                      "tertiary-fixed": "#ffdad8",
+                      "inverse-surface": "#e2e2e6",
+                      "background": "#111316",
+                      "on-secondary": "#053900",
+                      "primary-fixed-dim": "#ffb59e",
+                      "secondary": "#d7ffc5",
+                      "on-secondary-fixed-variant": "#095300",
+                      "on-surface-variant": "#e6beb2",
+                      "outline": "#ad897e",
+                      "on-primary": "#5e1700",
+                      "surface-container-lowest": "#0c0e11",
+                      "tertiary-container": "#ff525c",
+                      "surface-container-low": "#1a1c1f",
+                      "surface": "#111316",
+                      "on-primary-container": "#521300",
+                      "on-surface": "#e2e2e6"
+              },
+              "borderRadius": {
+                      "DEFAULT": "0.125rem",
+                      "lg": "0.25rem",
+                      "xl": "0.5rem",
+                      "full": "0.75rem"
+              },
+              "spacing": {
+                      "sm": "12px",
+                      "gutter": "24px",
+                      "base": "8px",
+                      "xs": "4px",
+                      "xl": "80px",
+                      "lg": "48px",
+                      "margin": "32px",
+                      "md": "24px"
+              },
+              "fontFamily": {
+                      "body-lg": [
+                              "Be Vietnam Pro", "sans-serif"
+                      ],
+                      "headline-md": [
+                              "Space Grotesk", "sans-serif"
+                      ],
+                      "headline-xl": [
+                              "Space Grotesk", "sans-serif"
+                      ],
+                      "headline-lg": [
+                              "Space Grotesk", "sans-serif"
+                      ],
+                      "body-md": [
+                              "Be Vietnam Pro", "sans-serif"
+                      ],
+                      "label-bold": [
+                              "Space Grotesk", "sans-serif"
+                      ]
+              },
+              "fontSize": {
+                      "body-lg": [
+                              "18px",
+                              {
+                                      "lineHeight": "1.6",
+                                      "fontWeight": "400"
+                              }
+                      ],
+                      "headline-md": [
+                              "24px",
+                              {
+                                      "lineHeight": "1.3",
+                                      "fontWeight": "600"
+                              }
+                      ],
+                      "headline-xl": [
+                              "64px",
+                              {
+                                      "lineHeight": "1.1",
+                                      "letterSpacing": "-0.04em",
+                                      "fontWeight": "700"
+                              }
+                      ],
+                      "headline-lg": [
+                              "40px",
+                              {
+                                      "lineHeight": "1.2",
+                                      "letterSpacing": "-0.02em",
+                                      "fontWeight": "700"
+                              }
+                      ],
+                      "body-md": [
+                              "16px",
+                              {
+                                      "lineHeight": "1.6",
+                                      "fontWeight": "400"
+                              }
+                      ],
+                      "label-bold": [
+                              "14px",
+                              {
+                                      "lineHeight": "1.0",
+                                      "fontWeight": "700"
+                              }
+                      ]
+              }
+      },
+          },
+        }
+      </script>
+<style>
+        .neon-glow:hover {
+            box-shadow: 0 0 15px rgba(255, 87, 26, 0.3);
+            border-color: rgba(255, 87, 26, 0.5);
+        }
+        .text-glow {
+            text-shadow: 0 0 10px rgba(121, 255, 91, 0.5);
+        }
+        /* Custom scrollbar for dark mode brutalism */
+        ::-webkit-scrollbar {
+            width: 8px;
+        }
+        ::-webkit-scrollbar-track {
+            background: #111316;
+        }
+        ::-webkit-scrollbar-thumb {
+            background: #333538;
+        }
+        ::-webkit-scrollbar-thumb:hover {
+            background: #ff571a;
+        }
+      </style>
+</head>
+<body class="bg-background text-on-background min-h-screen flex flex-col font-body-md selection:bg-primary-container selection:text-black">
+<!-- TopAppBar Shared Component -->
+<nav class="fixed top-0 left-0 w-full z-50 flex justify-between items-center px-6 h-20 md:px-12 bg-zinc-950/80 backdrop-blur-xl border-b border-zinc-800 shadow-[0_4px_20px_rgba(0,0,0,0.5)]">
+<div class="text-2xl font-black italic tracking-tighter text-orange-600">
+            WICKED WINGS
+        </div>
+<div class="hidden md:flex items-center gap-8 font-['Space_Grotesk'] font-bold tracking-tight">
+<a class="text-zinc-400 font-medium hover:text-orange-400 transition-colors duration-200" href="#">Home</a>
+<a class="text-orange-500 border-b-2 border-orange-600 pb-1 opacity-80 scale-95 transition-all" href="#">Menu</a>
+<a class="text-zinc-400 font-medium hover:text-orange-400 transition-colors duration-200" href="#">Events</a>
+<a class="text-zinc-400 font-medium hover:text-orange-400 transition-colors duration-200" href="#">Contact</a>
+</div>
+<button class="bg-transparent border-2 border-orange-600 text-orange-600 font-['Space_Grotesk'] font-bold tracking-tight px-4 py-2 hover:bg-orange-600 hover:text-black transition-colors duration-300">
+            BOOK A TABLE
+        </button>
+</nav>
+<!-- Main Content -->
+<main class="flex-grow pt-[120px] pb-xl px-4 md:px-gutter max-w-[1440px] mx-auto w-full">
+<!-- Header Section -->
+<header class="mb-lg border-b border-white/5 pb-md">
+<h1 class="font-headline-xl text-headline-xl text-on-background mb-base uppercase tracking-tighter">THE MENU</h1>
+<p class="font-body-lg text-body-lg text-on-surface-variant max-w-2xl">High-octane flavors. No apologies. Choose your heat, pick your poison, and settle in for the game.</p>
+</header>
+<!-- Menu Layout Grid -->
+<div class="grid grid-cols-1 lg:grid-cols-12 gap-gutter items-start">
+<!-- Sticky Category Nav (Desktop) -->
+<aside class="hidden lg:block lg:col-span-3 sticky top-[120px]">
+<nav class="flex flex-col gap-xs bg-surface-container border border-white/10 rounded-lg p-md">
+<a class="font-label-bold text-label-bold text-primary-container px-sm py-sm bg-white/5 border-l-2 border-primary-container" href="#wings">WINGS &amp; HEAT</a>
+<a class="font-label-bold text-label-bold text-on-surface-variant hover:text-on-background hover:bg-white/5 px-sm py-sm transition-colors border-l-2 border-transparent" href="#apps">APPETIZERS</a>
+<a class="font-label-bold text-label-bold text-on-surface-variant hover:text-on-background hover:bg-white/5 px-sm py-sm transition-colors border-l-2 border-transparent" href="#burgers">BURGERS &amp; MAINS</a>
+<a class="font-label-bold text-label-bold text-on-surface-variant hover:text-on-background hover:bg-white/5 px-sm py-sm transition-colors border-l-2 border-transparent" href="#drinks">DRAFT &amp; DRINKS</a>
+</nav>
+</aside>
+<!-- Main Menu Content -->
+<div class="lg:col-span-9 flex flex-col gap-xl">
+<!-- WINGS SECTION -->
+<section class="scroll-mt-[120px]" id="wings">
+<div class="flex items-end justify-between mb-md border-b border-white/5 pb-xs">
+<h2 class="font-headline-lg text-headline-lg text-on-background uppercase">Wicked Wings</h2>
+<span class="font-label-bold text-label-bold text-on-surface-variant">BONE-IN OR BONELESS</span>
+</div>
+<!-- Pricing Bento -->
+<div class="grid grid-cols-2 md:grid-cols-4 gap-sm mb-md">
+<div class="bg-surface-container border border-white/10 rounded p-sm text-center flex flex-col justify-center">
+<span class="font-label-bold text-label-bold text-on-surface-variant mb-xs">6 PIECE</span>
+<span class="font-headline-md text-headline-md text-secondary-fixed text-glow">$9.99</span>
+</div>
+<div class="bg-surface-container border border-white/10 rounded p-sm text-center flex flex-col justify-center">
+<span class="font-label-bold text-label-bold text-on-surface-variant mb-xs">12 PIECE</span>
+<span class="font-headline-md text-headline-md text-secondary-fixed text-glow">$17.99</span>
+</div>
+<div class="bg-surface-container border border-white/10 rounded p-sm text-center flex flex-col justify-center">
+<span class="font-label-bold text-label-bold text-on-surface-variant mb-xs">24 PIECE</span>
+<span class="font-headline-md text-headline-md text-secondary-fixed text-glow">$32.99</span>
+</div>
+<div class="bg-surface-container border border-primary-container/30 rounded p-sm text-center flex flex-col justify-center relative overflow-hidden group">
+<div class="absolute inset-0 bg-primary-container/10 group-hover:bg-primary-container/20 transition-colors"></div>
+<span class="font-label-bold text-label-bold text-primary-container mb-xs relative z-10">THE TAILGATE (50)</span>
+<span class="font-headline-md text-headline-md text-secondary-fixed text-glow relative z-10">$65.99</span>
+</div>
+</div>
+<!-- Heat Scale -->
+<div class="bg-surface border border-white/10 p-md mb-md">
+<h3 class="font-label-bold text-label-bold text-on-background mb-sm uppercase border-b border-white/5 pb-2">The Heat Scale</h3>
+<div class="grid grid-cols-1 md:grid-cols-5 gap-sm">
+<div class="flex items-center gap-xs">
+<span class="material-symbols-outlined text-surface-variant text-xl">local_fire_department</span>
+<span class="font-body-md text-body-md text-on-surface">1 - Rookie</span>
+</div>
+<div class="flex items-center gap-xs">
+<span class="material-symbols-outlined text-yellow-500 text-xl">local_fire_department</span>
+<span class="font-body-md text-body-md text-on-surface">2 - Starter</span>
+</div>
+<div class="flex items-center gap-xs">
+<span class="material-symbols-outlined text-orange-500 text-xl">local_fire_department</span>
+<span class="font-body-md text-body-md text-on-surface">3 - Pro</span>
+</div>
+<div class="flex items-center gap-xs">
+<span class="material-symbols-outlined text-tertiary-container text-xl" style="font-variation-settings: 'FILL' 1;">local_fire_department</span>
+<span class="font-body-md text-body-md text-tertiary-container font-semibold">4 - All-Star</span>
+</div>
+<div class="flex items-center gap-xs bg-error-container/20 px-2 py-1 border border-error-container/50">
+<span class="material-symbols-outlined text-error text-xl animate-pulse" style="font-variation-settings: 'FILL' 1;">local_fire_department</span>
+<span class="font-label-bold text-label-bold text-error">5 - HALL OF FLAME</span>
+</div>
+</div>
+</div>
+<!-- Flavors Grid -->
+<div class="grid grid-cols-1 md:grid-cols-2 gap-sm">
+<!-- Flavor Item -->
+<div class="bg-surface-container border border-white/10 p-md flex flex-col gap-xs transition-all duration-300 neon-glow group">
+<div class="flex justify-between items-start">
+<h4 class="font-headline-md text-headline-md text-on-background group-hover:text-primary-container transition-colors">Classic Buffalo</h4>
+<span class="px-2 py-1 border border-orange-500 text-orange-500 font-label-bold text-label-bold text-[10px] uppercase">HEAT 3</span>
+</div>
+<p class="font-body-md text-body-md text-on-surface-variant">The undisputed champion. Tangy, buttery, with the perfect kick.</p>
+</div>
+<!-- Flavor Item -->
+<div class="bg-surface-container border border-white/10 p-md flex flex-col gap-xs transition-all duration-300 neon-glow group">
+<div class="flex justify-between items-start">
+<h4 class="font-headline-md text-headline-md text-on-background group-hover:text-primary-container transition-colors">Mango Habanero</h4>
+<span class="px-2 py-1 border border-tertiary-container text-tertiary-container font-label-bold text-label-bold text-[10px] uppercase">HEAT 4</span>
+</div>
+<p class="font-body-md text-body-md text-on-surface-variant">Sweet heat collision. Tropical mango up front, lingering habanero burn.</p>
+</div>
+<!-- Flavor Item -->
+<div class="bg-surface-container border border-white/10 p-md flex flex-col gap-xs transition-all duration-300 neon-glow group">
+<div class="flex justify-between items-start">
+<h4 class="font-headline-md text-headline-md text-on-background group-hover:text-primary-container transition-colors">Garlic Parmesan</h4>
+<span class="px-2 py-1 border border-surface-variant text-on-surface-variant font-label-bold text-label-bold text-[10px] uppercase">HEAT 1</span>
+</div>
+<p class="font-body-md text-body-md text-on-surface-variant">Rich roasted garlic butter loaded with aged parmesan cheese.</p>
+</div>
+<!-- Flavor Item -->
+<div class="bg-surface-container border border-error-container/30 bg-error-container/5 p-md flex flex-col gap-xs transition-all duration-300 hover:border-error group">
+<div class="flex justify-between items-start">
+<div class="flex items-center gap-2">
+<h4 class="font-headline-md text-headline-md text-error">The Widowmaker</h4>
+<span class="material-symbols-outlined text-error text-sm" style="font-variation-settings: 'FILL' 1;">warning</span>
+</div>
+<span class="px-2 py-1 bg-error-container text-on-error-container font-label-bold text-label-bold text-[10px] uppercase">HEAT 5</span>
+</div>
+<p class="font-body-md text-body-md text-on-surface-variant">Ghost pepper, Carolina Reaper, and pure regret. Waiver required.</p>
+</div>
+</div>
+</section>
+<!-- APPETIZERS SECTION -->
+<section class="scroll-mt-[120px]" id="apps">
+<div class="mb-md border-b border-white/5 pb-xs">
+<h2 class="font-headline-lg text-headline-lg text-on-background uppercase">Appetizers</h2>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-2 gap-md">
+<!-- App Card -->
+<div class="bg-surface border border-white/10 p-md relative overflow-hidden group">
+<div class="flex justify-between items-baseline mb-xs relative z-10">
+<h3 class="font-headline-md text-headline-md text-on-background">Stadium Nachos</h3>
+<span class="font-headline-md text-headline-md text-secondary-fixed">$14.99</span>
+</div>
+<div class="flex gap-2 mb-sm relative z-10">
+<span class="inline-flex items-center px-2 py-1 bg-surface-variant text-on-surface font-label-bold text-[10px] tracking-wider uppercase">SHAREABLE</span>
+<span class="inline-flex items-center px-2 py-1 bg-tertiary-container text-on-tertiary-container font-label-bold text-[10px] tracking-wider uppercase">SPICY</span>
+</div>
+<p class="font-body-md text-body-md text-on-surface-variant relative z-10">House-fried tortilla chips piled high with smoked brisket, queso blanco, fresh jalapeños, and wicked sauce drizzle.</p>
+</div>
+<!-- App Card -->
+<div class="bg-surface border border-white/10 p-md relative overflow-hidden group">
+<div class="flex justify-between items-baseline mb-xs relative z-10">
+<h3 class="font-headline-md text-headline-md text-on-background">Fried Pickles</h3>
+<span class="font-headline-md text-headline-md text-secondary-fixed">$9.99</span>
+</div>
+<p class="font-body-md text-body-md text-on-surface-variant mt-sm relative z-10">Thick-cut dill chips dusted in our signature spicy cornmeal batter. Served with jalapeño ranch.</p>
+</div>
+<!-- App Card -->
+<div class="bg-surface border border-white/10 p-md relative overflow-hidden group">
+<div class="flex justify-between items-baseline mb-xs relative z-10">
+<h3 class="font-headline-md text-headline-md text-on-background">Pretzel Bites</h3>
+<span class="font-headline-md text-headline-md text-secondary-fixed">$11.99</span>
+</div>
+<p class="font-body-md text-body-md text-on-surface-variant mt-sm relative z-10">Bavarian-style soft pretzel nuggets tossed in coarse salt. Served with warm IPA beer cheese.</p>
+</div>
+</div>
+</section>
+<!-- BURGERS SECTION -->
+<section class="scroll-mt-[120px]" id="burgers">
+<div class="mb-md border-b border-white/5 pb-xs">
+<h2 class="font-headline-lg text-headline-lg text-on-background uppercase">Burgers &amp; Mains</h2>
+</div>
+<div class="flex flex-col gap-sm">
+<!-- List Item -->
+<div class="flex flex-col md:flex-row justify-between items-start md:items-center py-sm border-b border-white/5 hover:bg-surface-container px-sm -mx-sm transition-colors group">
+<div class="max-w-xl">
+<div class="flex items-center gap-3 mb-1">
+<h3 class="font-headline-md text-headline-md text-on-background group-hover:text-primary-container transition-colors">The Wicked Smash</h3>
+<span class="inline-flex items-center px-2 py-0.5 bg-primary-container text-on-primary-container font-label-bold text-[10px] uppercase">SIGNATURE</span>
+</div>
+<p class="font-body-md text-body-md text-on-surface-variant">Double smashed beef patties, american cheese, caramelized onions, wicked sauce, toasted brioche bun. Served with fries.</p>
+</div>
+<span class="font-headline-md text-headline-md text-secondary-fixed mt-2 md:mt-0">$16.99</span>
+</div>
+<!-- List Item -->
+<div class="flex flex-col md:flex-row justify-between items-start md:items-center py-sm border-b border-white/5 hover:bg-surface-container px-sm -mx-sm transition-colors group">
+<div class="max-w-xl">
+<div class="flex items-center gap-3 mb-1">
+<h3 class="font-headline-md text-headline-md text-on-background group-hover:text-primary-container transition-colors">Crispy Buffalo Sandwich</h3>
+</div>
+<p class="font-body-md text-body-md text-on-surface-variant">Hand-breaded chicken breast tossed in Heat 3 Buffalo, creamy slaw, thick pickles.</p>
+</div>
+<span class="font-headline-md text-headline-md text-secondary-fixed mt-2 md:mt-0">$15.99</span>
+</div>
+</div>
+</section>
+<!-- DRINKS SECTION -->
+<section class="scroll-mt-[120px]" id="drinks">
+<div class="mb-md border-b border-white/5 pb-xs flex items-center justify-between">
+<h2 class="font-headline-lg text-headline-lg text-on-background uppercase">Draft &amp; Drinks</h2>
+<span class="material-symbols-outlined text-primary-container text-3xl">sports_bar</span>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-2 gap-x-gutter gap-y-md">
+<!-- Drafts -->
+<div>
+<h3 class="font-label-bold text-label-bold text-on-surface-variant mb-sm uppercase tracking-widest border-l-2 border-primary-container pl-2">On Draft (16oz / 22oz)</h3>
+<ul class="flex flex-col">
+<li class="flex justify-between py-2 border-b border-white/5">
+<span class="font-body-md text-body-md text-on-background">Wicked Lager (House)</span>
+<span class="font-body-md text-body-md text-secondary-fixed font-bold">$5 / $7</span>
+</li>
+<li class="flex justify-between py-2 border-b border-white/5">
+<div class="flex items-center gap-2">
+<span class="font-body-md text-body-md text-on-background">Neon Haze IPA</span>
+<span class="text-[10px] text-secondary font-label-bold uppercase">LOCAL</span>
+</div>
+<span class="font-body-md text-body-md text-secondary-fixed font-bold">$7 / $9</span>
+</li>
+<li class="flex justify-between py-2 border-b border-white/5">
+<span class="font-body-md text-body-md text-on-background">Midnight Stout</span>
+<span class="font-body-md text-body-md text-secondary-fixed font-bold">$7 / $9</span>
+</li>
+</ul>
+</div>
+<!-- Cocktails -->
+<div>
+<h3 class="font-label-bold text-label-bold text-on-surface-variant mb-sm uppercase tracking-widest border-l-2 border-tertiary-container pl-2">Game Day Cocktails</h3>
+<ul class="flex flex-col">
+<li class="flex flex-col py-2 border-b border-white/5">
+<div class="flex justify-between items-baseline mb-1">
+<span class="font-body-md text-body-md text-on-background font-bold">Electric Margarita</span>
+<span class="font-body-md text-body-md text-secondary-fixed font-bold">$12</span>
+</div>
+<span class="font-body-md text-sm text-on-surface-variant">Silver tequila, blue curaçao, fresh lime, agave, chili-salt rim.</span>
+</li>
+<li class="flex flex-col py-2 border-b border-white/5">
+<div class="flex justify-between items-baseline mb-1">
+<span class="font-body-md text-body-md text-on-background font-bold">The Hail Mary</span>
+<span class="font-body-md text-body-md text-secondary-fixed font-bold">$14</span>
+</div>
+<span class="font-body-md text-sm text-on-surface-variant">Our signature spicy bloody mary loaded with a wing, bacon, and celery.</span>
+</li>
+</ul>
+</div>
+</div>
+</section>
+</div>
+</div>
+</main>
+<!-- Footer Shared Component -->
+<footer class="w-full py-12 px-6 flex flex-col md:flex-row justify-between items-center gap-6 bg-zinc-950 border-t border-zinc-900">
+<div class="text-lg font-black text-white">
+            WICKED WINGS
+        </div>
+<div class="flex flex-wrap justify-center gap-6 font-['Space_Grotesk'] text-xs tracking-widest uppercase">
+<a class="text-zinc-500 hover:text-orange-500 hover:underline hover:underline-offset-4 transition-colors" href="#">Privacy</a>
+<a class="text-zinc-500 hover:text-orange-500 hover:underline hover:underline-offset-4 transition-colors" href="#">Terms</a>
+<a class="text-zinc-500 hover:text-orange-500 hover:underline hover:underline-offset-4 transition-colors" href="#">Careers</a>
+<a class="text-zinc-500 hover:text-orange-500 hover:underline hover:underline-offset-4 transition-colors" href="#">Contact</a>
+</div>
+<div class="font-['Space_Grotesk'] text-xs tracking-widest uppercase text-orange-600 text-center md:text-right">
+            © 2024 WICKED WINGS AUSTIN. OPEN UNTIL 2AM.
+        </div>
+</footer>
+</body></html>
