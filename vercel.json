@@ -1,5 +1,6 @@
 {
-  "buildCommand": "cd wicked-wings && npm install && npm run build",
+  "installCommand": "npm install --prefix wicked-wings",
+  "buildCommand": "npm run build --prefix wicked-wings",
   "outputDirectory": "wicked-wings/dist",
   "rewrites": [{ "source": "/(.*)", "destination": "/index.html" }]
 }

@@ -1,0 +1,7 @@
+{
+  "name": "wicked-wings-root",
+  "private": true,
+  "scripts": {
+    "build": "npm install --prefix wicked-wings && npm run build --prefix wicked-wings"
+  }
+}
