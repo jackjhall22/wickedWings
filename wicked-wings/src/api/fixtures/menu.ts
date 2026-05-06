@@ -210,7 +210,7 @@ export const menuFixture: MenuData = {
       id: "ko-burger",
       name: "K.O. Burger",
       description: "Swiss Cheese, Grilled Onions, Mushrooms & Jalapenos, Bacon, Onion Ring & Fried Egg",
-      price: 13.99,
+      price: 15.99,
       badge: "signature",
     },
     {
