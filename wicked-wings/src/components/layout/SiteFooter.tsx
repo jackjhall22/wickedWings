@@ -2,6 +2,7 @@ import { Link } from "@tanstack/react-router"
 import { Separator } from "@/components/ui/separator"
 import logo from "@/assets/logo.png"
 import { navLinks } from "@/config/navigation"
+import { orderProviders } from "@/config/ordering"
 
 export function SiteFooter() {
   return (
@@ -58,6 +59,22 @@ export function SiteFooter() {
                 {link.label}
               </Link>
             ))}
+            <h3 className="font-display text-sm font-semibold text-foreground uppercase tracking-wider mb-2 mt-4">
+              Order Online
+            </h3>
+            {orderProviders
+              .filter((p) => p.id !== "phone")
+              .map((provider) => (
+                <a
+                  key={provider.id}
+                  href={provider.url}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="text-sm text-muted-foreground hover:text-foreground transition-colors"
+                >
+                  {provider.name}
+                </a>
+              ))}
           </div>
         </div>
 

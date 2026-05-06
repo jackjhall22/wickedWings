@@ -9,6 +9,7 @@ import {
   SheetTrigger,
 } from "@/components/ui/sheet"
 import { navLinks } from "@/config/navigation"
+import { OrderDrawer } from "@/components/ordering/OrderDrawer"
 
 export function SiteHeader() {
   return (
@@ -39,8 +40,12 @@ export function SiteHeader() {
           ))}
         </nav>
 
-        {/* Spacer for alignment */}
-        <div className="hidden md:block" />
+        {/* Desktop order CTA */}
+        <OrderDrawer>
+          <Button variant="default" size="sm" className="hidden md:inline-flex">
+            Order Takeout
+          </Button>
+        </OrderDrawer>
 
         {/* Mobile hamburger */}
         <Sheet>
@@ -63,6 +68,11 @@ export function SiteHeader() {
                   {link.label}
                 </Link>
               ))}
+              <OrderDrawer>
+                <Button variant="default" size="lg" className="mt-4 w-full">
+                  Order Takeout
+                </Button>
+              </OrderDrawer>
             </nav>
           </SheetContent>
         </Sheet>

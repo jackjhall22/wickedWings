@@ -1,5 +1,6 @@
 import { Link } from "@tanstack/react-router"
 import { Button } from "@/components/ui/button"
+import { OrderDrawer } from "@/components/ordering/OrderDrawer"
 
 export function Hero() {
   return (
@@ -55,6 +56,11 @@ export function Hero() {
           <Button size="lg" variant="default" className="min-w-40" asChild>
             <Link to="/menu">VIEW MENU</Link>
           </Button>
+          <OrderDrawer>
+            <Button size="lg" variant="outline" className="min-w-40">
+              ORDER TAKEOUT
+            </Button>
+          </OrderDrawer>
         </div>
       </div>
     </section>
