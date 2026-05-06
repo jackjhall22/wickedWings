@@ -53,15 +53,6 @@ export interface PizzaCategory {
   specialtyPizzas: SpecialtyPizza[]
 }
 
-export interface DraftBeer {
-  id: string
-  name: string
-  description?: string
-  price16oz: number
-  price22oz: number
-  isLocal?: boolean
-}
-
 export interface MenuData {
   wings: WingsCategory
   starters: SimpleMenuItem[]
@@ -75,7 +66,6 @@ export interface MenuData {
   desserts: SimpleMenuItem[]
   kidsMenu: SimpleMenuItem[]
   drinks: SimpleMenuItem[]
-  drafts: DraftBeer[]
 }
 
 export interface RecurringEvent {

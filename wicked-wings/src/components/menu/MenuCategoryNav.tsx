@@ -13,7 +13,6 @@ const sections = [
   { id: "desserts", label: "Desserts" },
   { id: "kids-menu", label: "Kids Menu" },
   { id: "drinks", label: "Drinks" },
-  { id: "drafts", label: "Drafts" },
 ]
 
 export function MenuCategoryNav() {

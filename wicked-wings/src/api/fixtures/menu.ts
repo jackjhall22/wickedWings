@@ -446,29 +446,4 @@ export const menuFixture: MenuData = {
     },
   ],
 
-  drafts: [
-    {
-      id: "wicked-lager",
-      name: "Wicked Lager",
-      description: "Our house lager — crisp, clean, and ice cold.",
-      price16oz: 5,
-      price22oz: 7,
-    },
-    {
-      id: "neon-haze-ipa",
-      name: "Neon Haze IPA",
-      description: "A hazy New England IPA from a local Austin brewery. Citrus-forward with a soft finish.",
-      price16oz: 7,
-      price22oz: 9,
-      isLocal: true,
-    },
-    {
-      id: "midnight-stout",
-      name: "Midnight Stout",
-      description: "Dark and roasty with notes of coffee and dark chocolate.",
-      price16oz: 7,
-      price22oz: 9,
-    },
-  ],
-
 }
