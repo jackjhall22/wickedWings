@@ -42,29 +42,16 @@ export function AboutSection() {
             </div>
           </div>
 
-          {/* Image placeholder */}
-          <div
-            className="relative overflow-hidden rounded-2xl bg-card border border-border aspect-[4/3] transition-transform duration-500 hover:scale-[1.02] cursor-default"
-            style={{
-              background:
-                "linear-gradient(135deg, #1e2023 0%, #282a2d 50%, #1e2023 100%)",
-            }}
-          >
-            <div className="absolute inset-0 flex flex-col items-center justify-center gap-4">
-              <div
-                className="font-display text-7xl font-black text-primary/20"
-              >
-                🔥
-              </div>
-              <span className="text-sm text-muted-foreground font-medium tracking-widest uppercase">
-                The Wing Bar
-              </span>
-            </div>
-            {/* Decorative neon border glow */}
+          <div className="relative overflow-hidden rounded-2xl border border-border aspect-[4/3] transition-transform duration-500 hover:scale-[1.02] cursor-default">
+            <img
+              src="/images/storefront.png"
+              alt="Wicked Wings Slaughter storefront at night with neon signage"
+              className="absolute inset-0 size-full object-cover object-center"
+            />
             <div
               className="absolute inset-0 rounded-2xl pointer-events-none"
               style={{
-                boxShadow: "inset 0 0 40px rgba(255,87,26,0.08)",
+                boxShadow: "inset 0 0 40px rgba(255,87,26,0.15)",
               }}
             />
           </div>
