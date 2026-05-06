@@ -1,5 +1,5 @@
 import { Link } from "@tanstack/react-router"
-import { Menu } from "lucide-react"
+import { Menu, Moon, Sun } from "lucide-react"
 import { Button } from "@/components/ui/button"
 import logo from "@/assets/logo.png"
 import {
@@ -10,8 +10,11 @@ import {
 } from "@/components/ui/sheet"
 import { navLinks } from "@/config/navigation"
 import { OrderDrawer } from "@/components/ordering/OrderDrawer"
+import { useTheme } from "@/lib/theme"
 
 export function SiteHeader() {
+  const { theme, toggleTheme } = useTheme()
+
   return (
     <header className="sticky top-0 z-40 border-b border-border bg-background/95 backdrop-blur">
       <div className="container mx-auto flex h-16 items-center justify-between gap-4 px-4">
@@ -40,12 +43,22 @@ export function SiteHeader() {
           ))}
         </nav>
 
-        {/* Desktop order CTA */}
-        <OrderDrawer>
-          <Button variant="default" size="sm" className="hidden md:inline-flex">
-            Order Takeout
+        {/* Desktop actions */}
+        <div className="hidden md:flex items-center gap-3">
+          <Button
+            variant="ghost"
+            size="icon"
+            onClick={toggleTheme}
+            aria-label={theme === "dark" ? "Switch to light mode" : "Switch to dark mode"}
+          >
+            {theme === "dark" ? <Sun className="size-5" /> : <Moon className="size-5" />}
           </Button>
-        </OrderDrawer>
+          <OrderDrawer>
+            <Button variant="default" size="sm">
+              Order Takeout
+            </Button>
+          </OrderDrawer>
+        </div>
 
         {/* Mobile hamburger */}
         <Sheet>
@@ -73,6 +86,16 @@ export function SiteHeader() {
                   Order Takeout
                 </Button>
               </OrderDrawer>
+              <Button
+                variant="outline"
+                size="sm"
+                onClick={toggleTheme}
+                className="mt-2 gap-2"
+                aria-label={theme === "dark" ? "Switch to light mode" : "Switch to dark mode"}
+              >
+                {theme === "dark" ? <Sun className="size-4" /> : <Moon className="size-4" />}
+                {theme === "dark" ? "Light mode" : "Dark mode"}
+              </Button>
             </nav>
           </SheetContent>
         </Sheet>
