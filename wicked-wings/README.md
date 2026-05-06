@@ -1,21 +1,45 @@
-# React + TypeScript + Vite + shadcn/ui
+# Wicked Wings Slaughter
 
-This is a template for a new Vite project with React, TypeScript, and shadcn/ui.
+Marketing website for Wicked Wings — an Austin, TX sports bar at 615 West Slaughter Lane.
 
-## Adding components
+## Tech Stack
 
-To add components to your app, run the following command:
+- **Vite** + **React 19** + **TypeScript**
+- **TanStack Router** (file-based routing)
+- **TanStack Query** (data fetching)
+- **shadcn/ui** (Radix + Tailwind v4)
+- **Sonner** (toast notifications)
+
+## Pages
+
+| Route | Description |
+|-------|-------------|
+| `/` | Landing — hero, about section, menu teaser |
+| `/menu` | Full menu with sticky category nav |
+| `/events` | Weekly recurring events lineup |
+
+## Getting Started
 
 ```bash
-npx shadcn@latest add button
+npm install
+npm run dev
 ```
 
-This will place the ui components in the `src/components` directory.
+## Scripts
 
-## Using components
+| Command | Description |
+|---------|-------------|
+| `npm run dev` | Start dev server |
+| `npm run build` | Type-check then build for production |
+| `npm run preview` | Preview production build locally |
+| `npm run lint` | Run ESLint |
+| `npm run typecheck` | Run TypeScript type checking |
+| `npm run format` | Format with Prettier |
 
-To use the components in your app, import them as follows:
+## Data
 
-```tsx
-import { Button } from "@/components/ui/button"
-```
+All menu and event data is served from local fixture files (`src/api/fixtures/`). The app uses a typed `WingsApi` interface via a mock client — no network requests are made.
+
+## Theme
+
+Permanently dark ("Wicked Neon" design system). Fonts: Space Grotesk (headings) + Be Vietnam Pro (body) via Google Fonts.

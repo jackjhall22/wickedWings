@@ -28,15 +28,13 @@ export function Hero() {
       <div className="relative z-10 container mx-auto px-4 text-center flex flex-col items-center gap-8">
         <div className="flex flex-col items-center gap-4">
           <span
-            className="inline-block rounded-full border border-primary/30 bg-primary/10 px-4 py-1.5 text-xs font-semibold tracking-widest text-primary uppercase"
-            style={{ fontFamily: "var(--font-display)" }}
+            className="font-display inline-block rounded-full border border-primary/30 bg-primary/10 px-4 py-1.5 text-xs font-semibold tracking-widest text-primary uppercase"
           >
             Austin, TX • 615 W Slaughter Ln
           </span>
           <h1
-            className="text-5xl md:text-7xl lg:text-8xl font-black leading-none tracking-tight text-primary"
+            className="font-display text-5xl md:text-7xl lg:text-8xl font-black leading-none tracking-tight text-primary"
             style={{
-              fontFamily: "var(--font-display)",
               filter: "drop-shadow(0 0 24px rgba(255,87,26,0.5))",
             }}
           >

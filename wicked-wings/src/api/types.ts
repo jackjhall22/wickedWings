@@ -95,40 +95,7 @@ export interface RecurringEvent {
   accentColor: "primary" | "destructive" | "accent"
 }
 
-export interface ReservationInput {
-  name: string
-  email: string
-  phone?: string
-  partySize: number
-  date: string
-  time: string
-  notes?: string
-}
-
-export interface Reservation {
-  id: string
-  createdAt: string
-  input: ReservationInput
-}
-
-export interface NotifySubscription {
-  id: string
-  eventId: string
-  email: string
-  createdAt: string
-}
-
-export interface ContactInput {
-  name: string
-  email: string
-  subject: string
-  message: string
-}
-
 export interface WingsApi {
   getMenu(): Promise<MenuData>
   listEvents(): Promise<RecurringEvent[]>
-  createReservation(input: ReservationInput): Promise<Reservation>
-  subscribeToEvent(input: { eventId: string; email: string }): Promise<NotifySubscription>
-  submitContactMessage(input: ContactInput): Promise<{ id: string }>
 }

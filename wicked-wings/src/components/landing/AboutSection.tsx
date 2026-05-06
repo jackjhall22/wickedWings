@@ -5,8 +5,7 @@ export function AboutSection() {
         <div className="grid grid-cols-1 gap-12 md:grid-cols-2 items-center">
           <div className="flex flex-col gap-6">
             <h2
-              className="text-4xl font-black leading-tight text-foreground border-l-4 border-primary pl-5"
-              style={{ fontFamily: "var(--font-display)" }}
+              className="font-display text-4xl font-black leading-tight text-foreground border-l-4 border-primary pl-5"
             >
               More Than a
               <br />
@@ -31,8 +30,7 @@ export function AboutSection() {
               ].map(({ label, value }) => (
                 <div key={label} className="flex flex-col gap-1">
                   <span
-                    className="text-3xl font-black text-primary"
-                    style={{ fontFamily: "var(--font-display)" }}
+                    className="font-display text-3xl font-black text-primary"
                   >
                     {value}
                   </span>
@@ -54,8 +52,7 @@ export function AboutSection() {
           >
             <div className="absolute inset-0 flex flex-col items-center justify-center gap-4">
               <div
-                className="text-7xl font-black text-primary/20"
-                style={{ fontFamily: "var(--font-display)" }}
+                className="font-display text-7xl font-black text-primary/20"
               >
                 🔥
               </div>

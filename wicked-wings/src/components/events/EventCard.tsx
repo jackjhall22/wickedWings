@@ -1,6 +1,3 @@
-import { Bell } from "lucide-react"
-import { Button } from "@/components/ui/button"
-import { NotifyMeDialog } from "./NotifyMeDialog"
 import type { RecurringEvent } from "@/api/types"
 
 const accentColorMap: Record<RecurringEvent["accentColor"], string> = {
@@ -40,17 +37,14 @@ export function EventCard({ event }: EventCardProps) {
         <div className="flex flex-col gap-1">
           <div className="flex items-baseline gap-2 flex-wrap">
             <span
-              className="text-sm font-bold uppercase tracking-widest"
-              style={{ color, fontFamily: "var(--font-display)" }}
+              className="font-display text-sm font-bold uppercase tracking-widest"
+              style={{ color }}
             >
               {event.day}
             </span>
             <span className="text-sm text-muted-foreground">@ {event.time}</span>
           </div>
-          <h3
-            className="text-xl font-black text-foreground"
-            style={{ fontFamily: "var(--font-display)" }}
-          >
+          <h3 className="font-display text-xl font-black text-foreground">
             {event.title}
           </h3>
         </div>
@@ -58,13 +52,6 @@ export function EventCard({ event }: EventCardProps) {
         <p className="text-muted-foreground text-sm leading-relaxed flex-1">
           {event.description}
         </p>
-
-        <NotifyMeDialog eventId={event.id} eventTitle={event.title}>
-          <Button variant="outline" size="sm" className="self-start">
-            <Bell data-icon="inline-start" />
-            NOTIFY ME
-          </Button>
-        </NotifyMeDialog>
       </div>
     </article>
   )

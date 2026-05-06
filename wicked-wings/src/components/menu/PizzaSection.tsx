@@ -11,10 +11,7 @@ export function PizzaSection({ pizza }: PizzaSectionProps) {
   return (
     <section id="pizza" className="flex flex-col gap-8">
       <div>
-        <h2
-          className="text-3xl font-black text-foreground"
-          style={{ fontFamily: "var(--font-display)" }}
-        >
+        <h2 className="font-display text-3xl font-black text-foreground">
           Pizza
         </h2>
         <p className="text-sm text-muted-foreground mt-1">One topping pizza — build your own or go specialty.</p>
@@ -25,18 +22,12 @@ export function PizzaSection({ pizza }: PizzaSectionProps) {
         {pizza.sizes.map((s) => (
           <Card key={s.label} className="bg-card border-border text-center">
             <CardHeader className="pb-2 pt-6">
-              <CardTitle
-                className="text-sm font-semibold text-muted-foreground uppercase tracking-wide"
-                style={{ fontFamily: "var(--font-display)" }}
-              >
+              <CardTitle className="font-display text-sm font-semibold text-muted-foreground uppercase tracking-wide">
                 {s.label} ({s.size})
               </CardTitle>
             </CardHeader>
             <CardContent className="pb-6">
-              <span
-                className="text-2xl font-black text-accent"
-                style={{ fontFamily: "var(--font-display)" }}
-              >
+              <span className="font-display text-2xl font-black text-accent">
                 ${s.basePrice.toFixed(2)}
               </span>
               <p className="text-xs text-muted-foreground mt-1">
@@ -50,10 +41,7 @@ export function PizzaSection({ pizza }: PizzaSectionProps) {
       {/* Options */}
       <div className="grid grid-cols-1 gap-6 sm:grid-cols-3">
         <div className="flex flex-col gap-2">
-          <h3
-            className="text-sm font-semibold text-muted-foreground uppercase tracking-wider"
-            style={{ fontFamily: "var(--font-display)" }}
-          >
+          <h3 className="font-display text-sm font-semibold text-muted-foreground uppercase tracking-wider">
             Sauces
           </h3>
           <div className="flex flex-wrap gap-2">
@@ -63,10 +51,7 @@ export function PizzaSection({ pizza }: PizzaSectionProps) {
           </div>
         </div>
         <div className="flex flex-col gap-2">
-          <h3
-            className="text-sm font-semibold text-muted-foreground uppercase tracking-wider"
-            style={{ fontFamily: "var(--font-display)" }}
-          >
+          <h3 className="font-display text-sm font-semibold text-muted-foreground uppercase tracking-wider">
             Crusts
           </h3>
           <div className="flex flex-wrap gap-2">
@@ -76,10 +61,7 @@ export function PizzaSection({ pizza }: PizzaSectionProps) {
           </div>
         </div>
         <div className="flex flex-col gap-2">
-          <h3
-            className="text-sm font-semibold text-muted-foreground uppercase tracking-wider"
-            style={{ fontFamily: "var(--font-display)" }}
-          >
+          <h3 className="font-display text-sm font-semibold text-muted-foreground uppercase tracking-wider">
             Toppings
           </h3>
           <div className="flex flex-wrap gap-1.5">
@@ -94,20 +76,14 @@ export function PizzaSection({ pizza }: PizzaSectionProps) {
 
       {/* Specialty pizzas */}
       <div className="flex flex-col gap-4">
-        <h3
-          className="text-lg font-bold text-foreground"
-          style={{ fontFamily: "var(--font-display)" }}
-        >
+        <h3 className="font-display text-lg font-bold text-foreground">
           Specialty Pizzas
         </h3>
         <div className="grid grid-cols-1 gap-4 sm:grid-cols-2">
           {pizza.specialtyPizzas.map((sp) => (
             <Card key={sp.id} className="bg-card border-border">
               <CardHeader className="pb-2">
-                <CardTitle
-                  className="text-foreground text-base"
-                  style={{ fontFamily: "var(--font-display)" }}
-                >
+                <CardTitle className="font-display text-foreground text-base">
                   {sp.name}
                 </CardTitle>
                 <CardDescription className="text-muted-foreground text-sm leading-relaxed">
@@ -119,10 +95,7 @@ export function PizzaSection({ pizza }: PizzaSectionProps) {
                   {sp.prices.map((p) => (
                     <span key={p.size} className="text-sm">
                       <span className="text-muted-foreground">{p.size}</span>{" "}
-                      <span
-                        className="font-bold text-accent"
-                        style={{ fontFamily: "var(--font-display)" }}
-                      >
+                      <span className="font-display font-bold text-accent">
                         ${p.price.toFixed(2)}
                       </span>
                     </span>

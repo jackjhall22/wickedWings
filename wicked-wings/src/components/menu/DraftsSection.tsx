@@ -10,8 +10,7 @@ export function DraftsSection({ drafts }: DraftsSectionProps) {
   return (
     <section id="drafts" className="flex flex-col gap-6">
       <h2
-        className="text-3xl font-black text-foreground"
-        style={{ fontFamily: "var(--font-display)" }}
+        className="font-display text-3xl font-black text-foreground"
       >
         On Draft
       </h2>
@@ -20,8 +19,7 @@ export function DraftsSection({ drafts }: DraftsSectionProps) {
         {/* Drafts column */}
         <div className="flex flex-col gap-4">
           <h3
-            className="text-sm font-semibold text-muted-foreground uppercase tracking-wider"
-            style={{ fontFamily: "var(--font-display)" }}
+            className="font-display text-sm font-semibold text-muted-foreground uppercase tracking-wider"
           >
             Beer on Draft
           </h3>
@@ -32,8 +30,7 @@ export function DraftsSection({ drafts }: DraftsSectionProps) {
                   <div className="flex flex-col gap-1 flex-1 min-w-0">
                     <div className="flex items-center gap-2 flex-wrap">
                       <span
-                        className="font-semibold text-foreground"
-                        style={{ fontFamily: "var(--font-display)" }}
+                        className="font-display font-semibold text-foreground"
                       >
                         {beer.name}
                       </span>
@@ -52,15 +49,13 @@ export function DraftsSection({ drafts }: DraftsSectionProps) {
                   <div className="text-right shrink-0 flex flex-col gap-0.5">
                     <span className="text-xs text-muted-foreground">16oz</span>
                     <span
-                      className="text-base font-bold text-accent"
-                      style={{ fontFamily: "var(--font-display)" }}
+                      className="font-display text-base font-bold text-accent"
                     >
                       ${beer.price16oz}
                     </span>
                     <span className="text-xs text-muted-foreground">22oz</span>
                     <span
-                      className="text-base font-bold text-accent"
-                      style={{ fontFamily: "var(--font-display)" }}
+                      className="font-display text-base font-bold text-accent"
                     >
                       ${beer.price22oz}
                     </span>
@@ -75,8 +70,7 @@ export function DraftsSection({ drafts }: DraftsSectionProps) {
         {/* Pricing guide */}
         <div className="flex flex-col gap-4">
           <h3
-            className="text-sm font-semibold text-muted-foreground uppercase tracking-wider"
-            style={{ fontFamily: "var(--font-display)" }}
+            className="font-display text-sm font-semibold text-muted-foreground uppercase tracking-wider"
           >
             Size Guide
           </h3>
@@ -90,8 +84,7 @@ export function DraftsSection({ drafts }: DraftsSectionProps) {
                 className="rounded-lg bg-card border border-border px-4 py-3 flex flex-col gap-1"
               >
                 <span
-                  className="font-semibold text-foreground"
-                  style={{ fontFamily: "var(--font-display)" }}
+                  className="font-display font-semibold text-foreground"
                 >
                   {size}
                 </span>

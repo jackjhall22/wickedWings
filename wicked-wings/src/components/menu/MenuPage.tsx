@@ -40,8 +40,7 @@ export function MenuPage() {
     <div className="container mx-auto px-4 py-10">
       <div className="mb-10">
         <h1
-          className="text-5xl font-black text-foreground mb-2"
-          style={{ fontFamily: "var(--font-display)" }}
+          className="font-display text-5xl font-black text-foreground mb-2"
         >
           The <span className="text-primary">Menu</span>
         </h1>

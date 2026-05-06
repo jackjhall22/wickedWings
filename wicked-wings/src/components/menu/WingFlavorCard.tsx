@@ -4,6 +4,14 @@ import { Card, CardContent, CardHeader, CardTitle, CardDescription } from "@/com
 import { Badge } from "@/components/ui/badge"
 import type { WingFlavor } from "@/api/types"
 
+const heatColors: Record<number, string> = {
+  1: "var(--heat-1)",
+  2: "var(--heat-2)",
+  3: "var(--heat-3)",
+  4: "var(--heat-4)",
+  5: "var(--heat-5)",
+}
+
 interface WingFlavorCardProps {
   flavor: WingFlavor
 }
@@ -19,10 +27,7 @@ export function WingFlavorCard({ flavor }: WingFlavorCardProps) {
     >
       <CardHeader className="pb-3">
         <div className="flex items-start justify-between gap-2">
-          <CardTitle
-            className="text-foreground"
-            style={{ fontFamily: "var(--font-display)" }}
-          >
+          <CardTitle className="font-display text-foreground">
             {flavor.name}
           </CardTitle>
           <div className="flex items-center gap-2 shrink-0">
@@ -51,7 +56,7 @@ export function WingFlavorCard({ flavor }: WingFlavorCardProps) {
                 <Icon
                   key={i}
                   className={`size-4 ${isTopHeat ? "animate-pulse" : ""}`}
-                  style={{ color: "#ef4444" }}
+                  style={{ color: heatColors[flavor.heatLevel] }}
                 />
               )
             })}

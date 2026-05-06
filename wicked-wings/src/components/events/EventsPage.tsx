@@ -23,8 +23,7 @@ export function EventsPage() {
       <section className="mb-12 flex flex-col gap-4" aria-label="Events hero">
         <div className="flex flex-wrap items-center gap-4">
           <h1
-            className="text-5xl font-black text-foreground"
-            style={{ fontFamily: "var(--font-display)" }}
+            className="font-display text-5xl font-black text-foreground"
           >
             THE <span className="text-primary">LINEUP</span>
           </h1>

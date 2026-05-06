@@ -57,8 +57,7 @@ export function MenuTeaser() {
       <div className="container mx-auto px-4">
         <div className="flex flex-col items-center gap-4 text-center mb-12">
           <h2
-            className="text-4xl font-black text-foreground"
-            style={{ fontFamily: "var(--font-display)" }}
+            className="font-display text-4xl font-black text-foreground"
           >
             Fuel the <span className="text-primary">Fire</span>
           </h2>
@@ -80,8 +79,7 @@ export function MenuTeaser() {
                       {item.label}
                     </span>
                     <CardTitle
-                      className="text-foreground mt-1"
-                      style={{ fontFamily: "var(--font-display)" }}
+                      className="font-display text-foreground mt-1"
                     >
                       {item.name}
                     </CardTitle>
@@ -91,8 +89,7 @@ export function MenuTeaser() {
                   </CardHeader>
                   <CardFooter>
                     <span
-                      className="text-lg font-bold text-accent"
-                      style={{ fontFamily: "var(--font-display)" }}
+                      className="font-display text-lg font-bold text-accent"
                     >
                       {item.price}
                     </span>

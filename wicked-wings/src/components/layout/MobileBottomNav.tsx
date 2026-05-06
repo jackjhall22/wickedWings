@@ -1,12 +1,5 @@
 import { Link } from "@tanstack/react-router"
-import { Home, UtensilsCrossed, Calendar, Phone } from "lucide-react"
-
-const navItems = [
-  { to: "/", label: "Home", icon: Home },
-  { to: "/menu", label: "Menu", icon: UtensilsCrossed },
-  { to: "/events", label: "Events", icon: Calendar },
-  { to: "/contact", label: "Contact", icon: Phone },
-]
+import { navItemsWithIcons } from "@/config/navigation"
 
 export function MobileBottomNav() {
   return (
@@ -15,7 +8,7 @@ export function MobileBottomNav() {
       aria-label="Bottom navigation"
     >
       <div className="flex items-center justify-around h-14">
-        {navItems.map(({ to, label, icon: Icon }) => (
+        {navItemsWithIcons.map(({ to, label, icon: Icon }) => (
           <Link
             key={to}
             to={to}

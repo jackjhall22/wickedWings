@@ -1,13 +1,7 @@
 import { Link } from "@tanstack/react-router"
 import { Separator } from "@/components/ui/separator"
 import logo from "@/assets/logo.png"
-
-const navLinks = [
-  { to: "/", label: "Home" },
-  { to: "/menu", label: "Menu" },
-  { to: "/events", label: "Events" },
-  { to: "/contact", label: "Contact" },
-]
+import { navLinks } from "@/config/navigation"
 
 export function SiteFooter() {
   return (
@@ -33,10 +27,7 @@ export function SiteFooter() {
 
           {/* Info */}
           <div className="flex flex-col gap-2">
-            <h3
-              className="text-sm font-semibold text-foreground uppercase tracking-wider mb-2"
-              style={{ fontFamily: "var(--font-display)" }}
-            >
+            <h3 className="font-display text-sm font-semibold text-foreground uppercase tracking-wider mb-2">
               Find Us
             </h3>
             <p className="text-sm text-muted-foreground">
@@ -55,10 +46,7 @@ export function SiteFooter() {
 
           {/* Nav */}
           <div className="flex flex-col gap-2">
-            <h3
-              className="text-sm font-semibold text-foreground uppercase tracking-wider mb-2"
-              style={{ fontFamily: "var(--font-display)" }}
-            >
+            <h3 className="font-display text-sm font-semibold text-foreground uppercase tracking-wider mb-2">
               Navigate
             </h3>
             {navLinks.map((link) => (

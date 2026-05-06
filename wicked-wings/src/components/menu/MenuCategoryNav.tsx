@@ -62,12 +62,11 @@ export function MenuCategoryNav() {
           <button
             key={id}
             onClick={() => scrollTo(id)}
-            className={`text-left px-4 py-2 rounded-md text-sm font-medium transition-colors ${
+            className={`font-display text-left px-4 py-2 rounded-md text-sm font-medium transition-colors ${
               activeId === id
                 ? "bg-primary/10 text-primary border-l-2 border-primary"
                 : "text-muted-foreground hover:text-foreground hover:bg-muted"
             }`}
-            style={{ fontFamily: "var(--font-display)" }}
           >
             {label}
           </button>
@@ -83,12 +82,11 @@ export function MenuCategoryNav() {
           <button
             key={id}
             onClick={() => scrollTo(id)}
-            className={`shrink-0 px-4 py-1.5 rounded-full text-sm font-medium transition-colors border ${
+            className={`font-display shrink-0 px-4 py-1.5 rounded-full text-sm font-medium transition-colors border ${
               activeId === id
                 ? "border-primary bg-primary/10 text-primary"
                 : "border-border text-muted-foreground hover:text-foreground"
             }`}
-            style={{ fontFamily: "var(--font-display)" }}
           >
             {label}
           </button>

@@ -1,5 +1,5 @@
 import { Link } from "@tanstack/react-router"
-import { Menu, Moon, Sun } from "lucide-react"
+import { Menu } from "lucide-react"
 import { Button } from "@/components/ui/button"
 import logo from "@/assets/logo.png"
 import {
@@ -8,18 +8,9 @@ import {
   SheetTitle,
   SheetTrigger,
 } from "@/components/ui/sheet"
-import { useTheme } from "@/lib/theme"
-
-const navLinks = [
-  { to: "/", label: "Home" },
-  { to: "/menu", label: "Menu" },
-  { to: "/events", label: "Events" },
-  { to: "/contact", label: "Contact" },
-]
+import { navLinks } from "@/config/navigation"
 
 export function SiteHeader() {
-  const { theme, toggleTheme } = useTheme()
-
   return (
     <header className="sticky top-0 z-40 border-b border-border bg-background/95 backdrop-blur">
       <div className="container mx-auto flex h-16 items-center justify-between gap-4 px-4">
@@ -40,25 +31,16 @@ export function SiteHeader() {
             <Link
               key={link.to}
               to={link.to}
-              className="text-sm font-medium text-muted-foreground transition-colors hover:text-foreground"
-              activeProps={{ className: "text-sm font-medium text-foreground" }}
+              className="font-display text-sm font-medium text-muted-foreground transition-colors hover:text-foreground"
+              activeProps={{ className: "font-display text-sm font-medium text-foreground" }}
             >
               {link.label}
             </Link>
           ))}
         </nav>
 
-        {/* Desktop CTA */}
-        <div className="hidden md:flex items-center gap-3">
-          <Button
-            variant="ghost"
-            size="icon"
-            onClick={toggleTheme}
-            aria-label={theme === "dark" ? "Switch to light mode" : "Switch to dark mode"}
-          >
-            {theme === "dark" ? <Sun className="size-5" /> : <Moon className="size-5" />}
-          </Button>
-        </div>
+        {/* Spacer for alignment */}
+        <div className="hidden md:block" />
 
         {/* Mobile hamburger */}
         <Sheet>
@@ -75,22 +57,12 @@ export function SiteHeader() {
                 <Link
                   key={link.to}
                   to={link.to}
-                  className="text-base font-medium text-muted-foreground hover:text-foreground transition-colors py-1 text-center w-full"
-                  activeProps={{ className: "text-base font-medium text-foreground py-1 text-center w-full" }}
+                  className="font-display text-base font-medium text-muted-foreground hover:text-foreground transition-colors py-1 text-center w-full"
+                  activeProps={{ className: "font-display text-base font-medium text-foreground py-1 text-center w-full" }}
                 >
                   {link.label}
                 </Link>
               ))}
-              <Button
-                variant="outline"
-                size="sm"
-                onClick={toggleTheme}
-                className="mt-2 gap-2"
-                aria-label={theme === "dark" ? "Switch to light mode" : "Switch to dark mode"}
-              >
-                {theme === "dark" ? <Sun className="size-4" /> : <Moon className="size-4" />}
-                {theme === "dark" ? "Light mode" : "Dark mode"}
-              </Button>
             </nav>
           </SheetContent>
         </Sheet>
