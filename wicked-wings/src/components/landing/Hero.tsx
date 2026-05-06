@@ -57,7 +57,7 @@ export function Hero() {
             <Link to="/menu">VIEW MENU</Link>
           </Button>
           <OrderDrawer>
-            <Button size="lg" variant="outline" className="min-w-40">
+            <Button size="lg" variant="default" className="min-w-40">
               ORDER TAKEOUT
             </Button>
           </OrderDrawer>

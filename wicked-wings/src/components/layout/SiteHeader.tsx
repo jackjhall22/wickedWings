@@ -82,9 +82,11 @@ export function SiteHeader() {
                 </Link>
               ))}
               <OrderDrawer>
-                <Button variant="default" size="lg" className="mt-4 w-full">
+                <button
+                  className="font-display text-base font-medium text-muted-foreground hover:text-foreground transition-colors py-1 text-center w-full"
+                >
                   Order Takeout
-                </Button>
+                </button>
               </OrderDrawer>
               <Button
                 variant="outline"
