@@ -2,15 +2,6 @@ import type { RecurringEvent } from "@/api/types"
 
 export const eventsFixture: RecurringEvent[] = [
   {
-    id: "cornhole-monday",
-    day: "Monday",
-    time: "7:00 PM",
-    title: "Cornhole League Night",
-    description:
-      "Join our weekly cornhole tournament. Teams of two compete for glory, bragging rights, and a tab on the house for winners.",
-    accentColor: "accent",
-  },
-  {
     id: "karaoke-tuesday",
     day: "Tuesday",
     time: "9:00 PM",
@@ -18,6 +9,15 @@ export const eventsFixture: RecurringEvent[] = [
     description:
       "Grab the mic and own the room. All genres welcome — from country classics to hip-hop bangers. No judgment, just vibes.",
     accentColor: "primary",
+  },
+  {
+    id: "cornhole-wednesday",
+    day: "Wednesday",
+    time: "7:00 PM",
+    title: "Cornhole League Night",
+    description:
+      "Join our weekly cornhole tournament. Teams of two compete for glory, bragging rights, and a tab on the house for winners.",
+    accentColor: "accent",
   },
   {
     id: "dj-thursday",

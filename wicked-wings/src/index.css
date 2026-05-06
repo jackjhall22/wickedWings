@@ -100,12 +100,6 @@
     --sidebar-accent-foreground: #111316;
     --sidebar-border: rgba(0, 0, 0, 0.1);
     --sidebar-ring: #e84b12;
-    /* Heat scale */
-    --heat-1: #71717a;
-    --heat-2: #ca8a04;
-    --heat-3: #ea6c00;
-    --heat-4: #dc2626;
-    --heat-5: #cc0000;
 }
 
 .dark {
@@ -141,12 +135,6 @@
     --sidebar-accent-foreground: #e2e2e6;
     --sidebar-border: rgba(255, 255, 255, 0.1);
     --sidebar-ring: #ff571a;
-    /* Heat scale */
-    --heat-1: #71717a;
-    --heat-2: #eab308;
-    --heat-3: #f97316;
-    --heat-4: #ff525c;
-    --heat-5: #ff0000;
 }
 
 @layer base {

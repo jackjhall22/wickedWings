@@ -1,6 +1,5 @@
 import { Link } from "@tanstack/react-router"
 import { Button } from "@/components/ui/button"
-import { BookATableDialog } from "@/components/booking/BookATableDialog"
 
 export function Hero() {
   return (
@@ -55,12 +54,7 @@ export function Hero() {
         </p>
 
         <div className="flex flex-wrap items-center justify-center gap-4">
-          <BookATableDialog>
-            <Button size="lg" variant="default" className="min-w-40">
-              BOOK A TABLE
-            </Button>
-          </BookATableDialog>
-          <Button size="lg" variant="outline" asChild className="min-w-40">
+          <Button size="lg" variant="default" className="min-w-40" asChild>
             <Link to="/menu">VIEW MENU</Link>
           </Button>
         </div>

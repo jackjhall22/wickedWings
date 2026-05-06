@@ -8,7 +8,6 @@ import {
   SheetTitle,
   SheetTrigger,
 } from "@/components/ui/sheet"
-import { BookATableDialog } from "@/components/booking/BookATableDialog"
 import { useTheme } from "@/lib/theme"
 
 const navLinks = [
@@ -26,7 +25,7 @@ export function SiteHeader() {
       <div className="container mx-auto flex h-16 items-center justify-between gap-4 px-4">
         {/* Brand */}
         <Link to="/" className="flex items-center gap-2 shrink-0">
-          <img src={logo} alt="" className="size-8" aria-hidden="true" />
+          <img src={logo} alt="" className="size-10" aria-hidden="true" />
           <span
             className="brand-logo leading-none select-none"
             style={{ fontSize: "2rem" }}
@@ -59,11 +58,6 @@ export function SiteHeader() {
           >
             {theme === "dark" ? <Sun className="size-5" /> : <Moon className="size-5" />}
           </Button>
-          <BookATableDialog>
-            <Button variant="default" size="sm">
-              BOOK A TABLE
-            </Button>
-          </BookATableDialog>
         </div>
 
         {/* Mobile hamburger */}
@@ -87,11 +81,6 @@ export function SiteHeader() {
                   {link.label}
                 </Link>
               ))}
-              <BookATableDialog>
-                <Button variant="default" className="mt-4">
-                  BOOK A TABLE
-                </Button>
-              </BookATableDialog>
               <Button
                 variant="outline"
                 size="sm"

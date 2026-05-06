@@ -1,22 +1,22 @@
 import { Separator } from "@/components/ui/separator"
 import type { SimpleMenuItem } from "@/api/types"
 
-interface BurgersSectionProps {
+interface SandwichesSectionProps {
   items: SimpleMenuItem[]
 }
 
-export function BurgersSection({ items }: BurgersSectionProps) {
+export function SandwichesSection({ items }: SandwichesSectionProps) {
   return (
-    <section id="burgers" className="flex flex-col gap-6">
+    <section id="sandwiches" className="flex flex-col gap-6">
       <div>
         <h2
           className="text-3xl font-black text-foreground"
           style={{ fontFamily: "var(--font-display)" }}
         >
-          Burgers
+          Sandwiches
         </h2>
         <p className="text-sm text-muted-foreground mt-1">
-          Fresh, never frozen 1/2 lb 100% beef. Served with fries or tots. Substitute sides for $1.00.
+          Served with fries or tots. Substitute sides for $1.00. All sandwiches also available as a wrap at no extra cost.
         </p>
       </div>
       <div className="flex flex-col gap-2">
@@ -40,7 +40,7 @@ export function BurgersSection({ items }: BurgersSectionProps) {
                 className="text-lg font-bold text-accent shrink-0"
                 style={{ fontFamily: "var(--font-display)" }}
               >
-                {item.id === "byo-burger" ? "From " : ""}${item.price.toFixed(2)}
+                ${item.price.toFixed(2)}
               </span>
             </div>
             {idx < items.length - 1 && <Separator />}

@@ -1,22 +1,22 @@
 import { Separator } from "@/components/ui/separator"
-import type { SimpleMenuItem } from "@/api/types"
+import type { SizedMenuItem } from "@/api/types"
 
-interface BurgersSectionProps {
-  items: SimpleMenuItem[]
+interface SeafoodSectionProps {
+  items: SizedMenuItem[]
 }
 
-export function BurgersSection({ items }: BurgersSectionProps) {
+export function SeafoodSection({ items }: SeafoodSectionProps) {
   return (
-    <section id="burgers" className="flex flex-col gap-6">
+    <section id="seafood" className="flex flex-col gap-6">
       <div>
         <h2
           className="text-3xl font-black text-foreground"
           style={{ fontFamily: "var(--font-display)" }}
         >
-          Burgers
+          Seafood
         </h2>
         <p className="text-sm text-muted-foreground mt-1">
-          Fresh, never frozen 1/2 lb 100% beef. Served with fries or tots. Substitute sides for $1.00.
+          Served with fries or tots. Substitute sides for $1.00.
         </p>
       </div>
       <div className="flex flex-col gap-2">
@@ -36,12 +36,21 @@ export function BurgersSection({ items }: BurgersSectionProps) {
                   </span>
                 )}
               </div>
-              <span
-                className="text-lg font-bold text-accent shrink-0"
-                style={{ fontFamily: "var(--font-display)" }}
-              >
-                {item.id === "byo-burger" ? "From " : ""}${item.price.toFixed(2)}
-              </span>
+              <div className="flex gap-3 shrink-0">
+                {item.prices.map((p) => (
+                  <span key={p.label} className="text-sm text-right">
+                    {p.label && (
+                      <span className="block text-xs text-muted-foreground">{p.label}</span>
+                    )}
+                    <span
+                      className="text-lg font-bold text-accent"
+                      style={{ fontFamily: "var(--font-display)" }}
+                    >
+                      ${p.price.toFixed(2)}
+                    </span>
+                  </span>
+                ))}
+              </div>
             </div>
             {idx < items.length - 1 && <Separator />}
           </div>

@@ -33,21 +33,21 @@ export function MenuTeaser() {
     ? [
         {
           label: "Fan Favorite Wing",
-          name: data.wings.flavors[0].name,
-          description: data.wings.flavors[0].description,
-          price: `From $${data.wings.pricingTiers[0].price.toFixed(2)}`,
+          name: data.wings.flavors.find((f) => f.id === "buffalo")?.name ?? data.wings.flavors[0].name,
+          description: data.wings.flavors.find((f) => f.id === "buffalo")?.description ?? data.wings.flavors[0].description,
+          price: "Market Price",
         },
         {
           label: "Starter",
-          name: data.appetizers[0].name,
-          description: data.appetizers[0].description ?? "",
-          price: `$${data.appetizers[0].price.toFixed(2)}`,
+          name: data.starters[0].name,
+          description: data.starters[0].description ?? "",
+          price: `$${data.starters[0].price.toFixed(2)}`,
         },
         {
-          label: "Cocktail",
-          name: data.cocktails[0].name,
-          description: data.cocktails[0].description ?? "",
-          price: `$${data.cocktails[0].price.toFixed(2)}`,
+          label: "Signature Burger",
+          name: data.burgers[0].name,
+          description: data.burgers[0].description ?? "",
+          price: `$${data.burgers[0].price.toFixed(2)}`,
         },
       ]
     : []

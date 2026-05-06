@@ -2,8 +2,17 @@ import { useEffect, useState } from "react"
 
 const sections = [
   { id: "wings", label: "Wings" },
-  { id: "appetizers", label: "Appetizers" },
-  { id: "burgers", label: "Burgers & Mains" },
+  { id: "starters", label: "Starters" },
+  { id: "burgers", label: "Burgers" },
+  { id: "pizza", label: "Pizza" },
+  { id: "seafood", label: "Seafood" },
+  { id: "sandwiches", label: "Sandwiches" },
+  { id: "chicken-entrees", label: "Chicken Entrees" },
+  { id: "sides", label: "Sides" },
+  { id: "salads", label: "Salads" },
+  { id: "desserts", label: "Desserts" },
+  { id: "kids-menu", label: "Kids Menu" },
+  { id: "drinks", label: "Drinks" },
   { id: "drafts", label: "Drafts" },
   { id: "cocktails", label: "Cocktails" },
 ]
