@@ -62,13 +62,6 @@ export interface DraftBeer {
   isLocal?: boolean
 }
 
-export interface Cocktail {
-  id: string
-  name: string
-  description?: string
-  price: number
-}
-
 export interface MenuData {
   wings: WingsCategory
   starters: SimpleMenuItem[]
@@ -83,7 +76,6 @@ export interface MenuData {
   kidsMenu: SimpleMenuItem[]
   drinks: SimpleMenuItem[]
   drafts: DraftBeer[]
-  cocktails: Cocktail[]
 }
 
 export interface RecurringEvent {

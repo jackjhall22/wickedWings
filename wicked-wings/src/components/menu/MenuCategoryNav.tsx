@@ -14,7 +14,6 @@ const sections = [
   { id: "kids-menu", label: "Kids Menu" },
   { id: "drinks", label: "Drinks" },
   { id: "drafts", label: "Drafts" },
-  { id: "cocktails", label: "Cocktails" },
 ]
 
 export function MenuCategoryNav() {

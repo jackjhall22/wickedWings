@@ -471,18 +471,4 @@ export const menuFixture: MenuData = {
     },
   ],
 
-  cocktails: [
-    {
-      id: "electric-margarita",
-      name: "Electric Margarita",
-      description: "Tequila blanco, fresh lime, blue curaçao, agave. Electric blue and dangerously smooth.",
-      price: 12,
-    },
-    {
-      id: "hail-mary",
-      name: "The Hail Mary",
-      description: "Spiced rum, ginger beer, jalapeño syrup, fresh lime. The play that wins the game.",
-      price: 14,
-    },
-  ],
 }

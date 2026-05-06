@@ -23,9 +23,8 @@ export function AboutSection() {
             </p>
             <div className="flex flex-wrap gap-6">
               {[
-                { label: "Wing Flavors", value: "4+" },
-                { label: "Screens", value: "20+" },
-                { label: "Drafts on Tap", value: "3" },
+                { label: "Wing Flavors", value: "20" },
+                { label: "Drafts on Tap", value: "15" },
                 { label: "Weekly Events", value: "5" },
               ].map(({ label, value }) => (
                 <div key={label} className="flex flex-col gap-1">

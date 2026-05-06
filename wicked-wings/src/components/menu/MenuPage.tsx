@@ -14,7 +14,6 @@ import { DessertsSection } from "./DessertsSection"
 import { KidsMenuSection } from "./KidsMenuSection"
 import { DrinksSection } from "./DrinksSection"
 import { DraftsSection } from "./DraftsSection"
-import { CocktailsSection } from "./CocktailsSection"
 
 function MenuSkeleton() {
   return (
@@ -71,7 +70,6 @@ export function MenuPage() {
             <KidsMenuSection items={data.kidsMenu} />
             <DrinksSection items={data.drinks} />
             <DraftsSection drafts={data.drafts} />
-            <CocktailsSection cocktails={data.cocktails} />
           </div>
         </div>
       ) : null}
