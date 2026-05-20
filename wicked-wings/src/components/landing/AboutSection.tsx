@@ -17,14 +17,14 @@ export function AboutSection() {
               wing flavors to the energy in the room on game night.
             </p>
             <p className="text-muted-foreground leading-relaxed">
-              Whether you're coming for the Widowmaker challenge, a cold draft with your
+              Whether you're coming for our boldest wing flavors, a cold draft with your
               crew, or karaoke night with friends, the vibe is always right. Daily 11AM–2AM,
               no slowing down.
             </p>
             <div className="flex flex-wrap gap-6">
               {[
                 { label: "Wing Flavors", value: "20" },
-                { label: "Drafts on Tap", value: "15" },
+                { label: "Drafts on Tap", value: "14" },
                 { label: "Weekly Events", value: "5" },
               ].map(({ label, value }) => (
                 <div key={label} className="flex flex-col gap-1">
